@@ -2,7 +2,7 @@
 
 ## 📘 Sobre
 
-O site foi criado com intuito de criar um e-commerce Pelúcia & Ração de uma PetShop com agendamento de Banho & Tosa.
+O site foi desenvolvido com intuito de criar um e-commerce Pelúcia & Ração de uma PetShop com agendamento de Banho & Tosa.
 
 ## 📚 Qual foi a base do site?
 
