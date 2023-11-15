@@ -8,7 +8,7 @@ O site foi criado com intuito de criar um e-commerce Pelúcia & Ração de uma P
 
 Foi criado com 4 tabelas para o Banco de Dados sendo de Usuário, Produtos, Pets e Agendamento. Contendo linguagem de programação de HTML, CSS e PHP.
 
--  Como é o site em Mockup.
+-  Como foi a base do site em Mockup.
   
 <img src="" />
 
