@@ -5,23 +5,14 @@ $crud = new Crud($db);
 $data = $crud->read();
 ?>
 
+
 <!DOCTYPE html>
 <html>
+<link rel="stylesheet" href="style.css">
 
 <head>
     <title>Pelúcias & Ração </title>
 </head>
-
-<?php
-
-        while ($row = $data->fetch(PDO::FETCH_ASSOC)) {
-        ?>
-            <tr>
-                <td class="tabNome"><?php echo $row['nome']; ?></td>
-                <td class="tabIdade"><?php echo $row['idade']; ?></td>
-                <td class="tabAcao"> <a href="edit.php?id=<?php echo $row['id']; ?>">Editar</a> <a href="delete.php?id=<?php echo $row['id']; ?>">Excluir</a> </td>
-            </tr>
-        <?php } ?>
 
 <body>
 <section class="principal" id="home">
