@@ -12,7 +12,7 @@ Foi criado com 4 tabelas para o Banco de Dados sendo de Usuário, Produtos, Pets
 
 
   
-<img src="" />
+<img src="/PRUPC/img/mockup site" />
 
 
 
