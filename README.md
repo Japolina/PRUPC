@@ -14,7 +14,13 @@ Foi criado com 4 tabelas para o Banco de Dados sendo de Usuário, Produtos, Pets
   
 <img src="/PRUPC/img/mockup site.jpg"/>
 
+- Como será as telas de Login, Cadastro e Agendamento.
 
+<img src="/PRUPC/img/mockup telas.jpg"/>
+
+- Como foi a construção no Banco de Dados
+
+<img src="/PRUPC/img/Banco.jpg"/>
 
 
 
