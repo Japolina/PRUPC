@@ -1,17 +1,23 @@
 <?php
 include_once './config/config.php';
-include_once './classes/CrudUsu.php';
+include_once 'classes/Crud.php';
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-
+if($_SERVER['REQUEST_METHOD']==='POST'){
     $crud = new Crud($db);
+    $id = $_POST['id'];
     $nome = $_POST['nome'];
-    $cpf = $_POST['cpf'];
-    $email = $_POST['email'];
-    $senha = $_POST['senha'];
-    $crud->create($nome,  $cpf ,$email, $senha);
-    header('refresh:2, index.php');
+    $idade = $_POST['idade'];
+    $crud->update($id, $nome, $idade);
+
+    echo"Editado com sucesso!!!😎👍";
+    header('refresh:2,index.php');
     exit();
+}
+if (isset($_GET['id'])){
+    $id = $_GET['id'];
+    $crud = new Crud($db);
+    $data = $crud->readEdit($id);
+    $row = $data->fetch(PDO::FETCH_ASSOC);
 }
 ?>
 
@@ -21,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro</title>
+    <title>Atualização</title>
 </head>
 
 <style>
@@ -57,7 +63,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         border-radius: 10px;
     }
 
-    .salvar {
+    .editar {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -68,17 +74,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </style>
 
 <body>
-    <h1>Tela Cadastro</h1>
+    <h1>Tela Atualização de Cadastro</h1>
     <div class="container">
 
         <form method="post">
-            <input type="text" name="nome" id="nome" maxlength="24" placeholder="Insira seu nome completo" required>
-            <input type="text" name="CPF" id="cpf" placeholder="Insira seu CPF" required>
-            <input type="text" name="email" id="email" placeholder="Insira seu email" required>
-            <input type="password" name="senha" id="senha" placeholder="Insira uma senha" required>
-            <input type="password" name="rsenha" id="rsenha" placeholder="Repita sua senha" required>
-            
-            <input type="submit" value="Salvar" class="salvar">
+            <input type="hidden" name="id" id="id" value="<?php echo$row['id'];?>">
+            <input type="text" name="nome" id="nome" maxlength="24" value="<?php echo $row['nome'];?>" required>
+            <input type="number" name="idade" id="idade" value="<?php echo $row['idade'];?>" required>
+            <input type="submit" value="Editar" class="editar">
         </form>
 
     </div>

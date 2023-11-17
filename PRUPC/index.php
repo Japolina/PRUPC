@@ -9,21 +9,11 @@ $data = $crud->read();
 <!DOCTYPE html>
 <html>
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="media.css">
 
 <head>
     <title>Pelúcias & Ração </title>
 </head>
-
-<?php
-
-while ($row = $data->fetch(PDO::FETCH_ASSOC)) {
-?>
-    <tr>
-        <td class="tabNome"><?php echo $row['nome']; ?></td>
-        <td class="tabIdade"><?php echo $row['idade']; ?></td>
-        <td class="tabAcao"> <a href="edit.php?id=<?php echo $row['id']; ?>">Editar</a> <a href="delete.php?id=<?php echo $row['id']; ?>">Excluir</a> </td>
-    </tr>
-<?php } ?>
 
 <body>
     <section class="principal" id="home">
@@ -34,7 +24,7 @@ while ($row = $data->fetch(PDO::FETCH_ASSOC)) {
                     <li><a href="#home">Home</a></li>
                     <li><a href="#Produtos">Produtos</a></li>
                     <li><a href="#Banho&Tosa">Banho&Tosa</a></li>
-                    <li><a class="btn">Login</a></li>
+                    <li><a class="btn" href="./usuario/login.php">Login</a></li>
                 </ul>
             </nav>
         </header>
@@ -80,23 +70,68 @@ while ($row = $data->fetch(PDO::FETCH_ASSOC)) {
         </div>
     </section>
 
-    <section class="produtos">
+    <div class="titulo">
         <h2>Mais Vendidos</h2>
-        <div class="containerProdutos">
-            <div class="boxOpition">
-                <ul>
-                    <li>
-                        <button class="btn-produtos active">
-                            <div class="conteudoItem">Cachorros</div>
-                        </button>
-                    </li>
-                </ul>
-            </div>
-            <div class="boxContent">
+    </div>
+            <section class="produtos">
+                <div class="boxProduto">
+                    <a href="categoriaProdutos.php">
+                        <div class="tumbnail_imagem">
+                            <img src="img/prod1Mini.jpg" alt="" />
+                        </div>
+                        <section >
+                            <header class="tituloProdtuo">
+                                <h2>Ração Dogão 25kg</h2>
+                            </header>
+                        </section>
+                        <section class="preco">
+                            <p>R$ 39,00</p>
+                        </section>
+                        <section class="preco2">
+                            <p>R$ 39,00</p>
+                        </section>
+                    </a>
+                    <button class="btn"> 
+                        <span style="color:#fff">Comprar</span>
+                    </button>
+                </div>
+                <div class="boxProduto">
+                    <a href="categoriaProdutos.php">
+                        <div class="tumbnail_imagem">
+                            <img src="img/prod1Mini.jpg" alt="" />
+                        </div>
+                        <section>
+                            <header>
+                                <h2>Ração Dogão</h2>
+                            </header>
+                        </section>
+                        <section class="preco">
+                            <p>R$ 39,00</p>
+                        </section>
+                    </a>
+                    <button>
 
-            </div>
-        </div>
-    </section>
+                    </button>
+                </div>
+                <div class="boxProduto">
+                    <a href="categoriaProdutos.php">
+                        <div class="tumbnail_imagem">
+                            <img src="img/prod1Mini.jpg" alt="" />
+                        </div>
+                        <section>
+                            <header>
+                                <h2>Ração Dogão</h2>
+                            </header>
+                        </section>
+                        <section>
+                            <p>R$ 39,00</p>
+                        </section>
+                    </a>
+                    <button>
+
+                    </button>
+                </div>
+            </section>
 
 
 

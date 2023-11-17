@@ -1,15 +1,13 @@
 <?php
 include_once './config/config.php';
-include_once './classes/CrudUsu.php';
+include_once './classes/Crud.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $crud = new Crud($db);
     $nome = $_POST['nome'];
-    $cpf = $_POST['cpf'];
-    $email = $_POST['email'];
-    $senha = $_POST['senha'];
-    $crud->create($nome,  $cpf ,$email, $senha);
+    $idade = $_POST['idade'];
+    $crud->create($nome, $idade);
     header('refresh:2, index.php');
     exit();
 }
@@ -73,11 +71,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         <form method="post">
             <input type="text" name="nome" id="nome" maxlength="24" placeholder="Insira seu nome completo" required>
-            <input type="text" name="CPF" id="cpf" placeholder="Insira seu CPF" required>
-            <input type="text" name="email" id="email" placeholder="Insira seu email" required>
-            <input type="password" name="senha" id="senha" placeholder="Insira uma senha" required>
-            <input type="password" name="rsenha" id="rsenha" placeholder="Repita sua senha" required>
-            
+            <input type="number" name="idade" id="idade" placeholder="Insira sua idade" required>
             <input type="submit" value="Salvar" class="salvar">
         </form>
 

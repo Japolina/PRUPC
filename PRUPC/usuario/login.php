@@ -1,6 +1,6 @@
 <?php
-include_once './config/config.php';
-include_once './classes/CrudUsu.php';
+include_once "../config/config.php";
+include_once '../classes/CrudUsu.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
@@ -9,7 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $cpf = $_POST['cpf'];
     $email = $_POST['email'];
     $senha = $_POST['senha'];
-    $crud->create($nome,  $cpf ,$email, $senha);
+    $crud->read($nome,  $cpf ,$email, $senha);
     header('refresh:2, index.php');
     exit();
 }
@@ -17,6 +17,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <!DOCTYPE html>
 <html lang="pt-BR">
+<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="../media.css">
 
 <head>
     <meta charset="UTF-8">
@@ -68,17 +70,27 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </style>
 
 <body>
-    <h1>Tela Cadastro</h1>
+<section class="principal" id="home">
+        <header class="nav">
+            <a href="#"><img src="img/logo.png" alt="" class="logo"></a>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#Produtos">Produtos</a></li>
+                    <li><a href="#Banho&Tosa">Banho&Tosa</a></li>
+                    <li><a class="btn" href="./usuario/login.php">Login</a></li>
+                </ul>
+            </nav>
+        </header>
+    </section>
+
+    <h1>Faça seu Login</h1>
     <div class="container">
 
         <form method="post">
-            <input type="text" name="nome" id="nome" maxlength="24" placeholder="Insira seu nome completo" required>
-            <input type="text" name="CPF" id="cpf" placeholder="Insira seu CPF" required>
             <input type="text" name="email" id="email" placeholder="Insira seu email" required>
             <input type="password" name="senha" id="senha" placeholder="Insira uma senha" required>
-            <input type="password" name="rsenha" id="rsenha" placeholder="Repita sua senha" required>
-            
-            <input type="submit" value="Salvar" class="salvar">
+            <input type="submit" value="Logar" class="salvar">
         </form>
 
     </div>
