@@ -73,65 +73,33 @@ $data = $crud->read();
     <div class="titulo">
         <h2>Mais Vendidos</h2>
     </div>
-            <section class="produtos">
-                <div class="boxProduto">
-                    <a href="categoriaProdutos.php">
-                        <div class="tumbnail_imagem">
-                            <img src="img/prod1Mini.jpg" alt="" />
-                        </div>
-                        <section >
-                            <header class="tituloProdtuo">
-                                <h2>Ração Dogão 25kg</h2>
-                            </header>
-                        </section>
-                        <section class="preco">
-                            <p>R$ 39,00</p>
-                        </section>
-                        <section class="preco2">
-                            <p>R$ 39,00</p>
-                        </section>
-                    </a>
-                    <button class="btn"> 
-                        <span style="color:#fff">Comprar</span>
-                    </button>
-                </div>
-                <div class="boxProduto">
-                    <a href="categoriaProdutos.php">
-                        <div class="tumbnail_imagem">
-                            <img src="img/prod1Mini.jpg" alt="" />
-                        </div>
-                        <section>
-                            <header>
-                                <h2>Ração Dogão</h2>
-                            </header>
-                        </section>
-                        <section class="preco">
-                            <p>R$ 39,00</p>
-                        </section>
-                    </a>
-                    <button>
 
-                    </button>
-                </div>
-                <div class="boxProduto">
-                    <a href="categoriaProdutos.php">
-                        <div class="tumbnail_imagem">
-                            <img src="img/prod1Mini.jpg" alt="" />
-                        </div>
-                        <section>
-                            <header>
-                                <h2>Ração Dogão</h2>
-                            </header>
-                        </section>
-                        <section>
-                            <p>R$ 39,00</p>
-                        </section>
-                    </a>
-                    <button>
 
-                    </button>
+    <div class="produtos">
+
+        <div class="boxProduto">
+            <a href="categoriaProdutos.php">
+                <div class="tumbnail_imagem">
+                    <img src="img/prod1Mini.jpg" alt="" />
                 </div>
-            </section>
+                <section>
+                    <header class="tituloProdtuo">
+                        <h2>Ração Dogão 25kg</h2>
+                    </header>
+                </section>
+                <section class="preco">
+                    <p>R$ 39,00</p>
+                </section>
+                <section class="preco2">
+                    <p>R$ 39,00</p>
+                </section>
+            </a>
+            <button class="btn">
+                <span style="color:#fff">Comprar</span>
+            </button>
+        </div>
+
+    </div>
 
 
 
