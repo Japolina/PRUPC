@@ -11,6 +11,7 @@ $data = $crud->read();
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="media.css">
 <script src="script.js" defer></script>
+
 <head>
     <title>Pelúcias & Ração </title>
 </head>
@@ -29,7 +30,7 @@ $data = $crud->read();
             </nav>
         </header>
     </section>
-
+    <!-- -------------------------------------PRINCIPAL---------------------------------------------------- -->
     <section class="content">
         <div class="fundoPrincipal">
             <div class="text">
@@ -56,161 +57,187 @@ $data = $crud->read();
 
     </section>
 
+
+    <!-- -------------------------------------VANTAGEMS---------------------------------------------------- -->
     <section class="homeVantages">
-        <div class="advantage">
-            <div>
-                <h1>Teste</h1>
+        <div class="advantage-list">
+            <div class="advantage-item">
+                <div class="advantage-img">
+                    <img src="https://static.petz.com.br/images/exp-facelift/express-ship.svg" alt="">
+                </div>
+                <div class="advantage-text">
+                    <p>Entrega rápida</p>
+                </div>
+
             </div>
+
+            <div class="advantage-item">
+                <div class="advantage-img">
+                    <img src="https://static.petz.com.br/images/exp-facelift/free-freight.svg" alt="">
+                </div>
+                <div class="advantage-text">
+                    <p>Entrega rápida</p>
+                </div>
+
+            </div>
+
+            <div class="advantage-item">
+                <div class="advantage-img">
+                    <img src="https://static.petz.com.br/images/exp-facelift/installments.svg" alt="">
+                </div>
+                <div class="advantage-text">
+                    <p>Entrega rápida</p>
+                </div>
+
+            </div>
+
+            <div class="advantage-item">
+                <div class="advantage-img">
+                    <img src="https://static.petz.com.br/images/exp-facelift/pickup-store.svg" alt="">
+                </div>
+                <div class="advantage-text">
+                    <p>Entrega rápida</p>
+                </div>
+
+            </div>
+
         </div>
     </section>
 
+
+    <!-- -------------------------------------BANNERS---------------------------------------------------- -->
     <section class="carrosel">
         <div class="bannerCarrosel">
 
         </div>
     </section>
 
-    <div class="titulo">
-        <h2>Mais Vendidos</h2>
+
+    <!-- -------------------------------------TITULO VENDIDOS ---------------------------------------------------- -->
+    <div class="titulo-vendidos">
+        <h2 class="texto-vendidos">Mais Vendidos</h2>
     </div>
 
-    
-    <section class="carousel-produtos">
-        <i class="fa-solid fa-angle-left"> < </i>
 
-        <div class="boxProduto">
-            <div class="categoriaProdutos">
-                <div class="badge"><h4 style="font-weight: bolder;">Hot</h4></div>
-                <a href="categoriaProdutos.php">
-                    <div class="tumbnail_imagem">
-                        <img src="img/prod1Mini.jpg" alt="" />
+    <!-- -------------------------------------PRODUTOS ---------------------------------------------------- -->
+    <div class="carousel-produtos">
+        <i class="fa-solid fa-angle-left">  < </i>
+
+                <div class="boxProduto">
+                    <div class="categoriaProdutos">
+                        <div class="badge">
+                            <h4 style="font-weight: bolder;">Hot</h4>
+                        </div>
+                        <a href="categoriaProdutos.php">
+                            <div class="tumbnail_imagem">
+                                <img src="img/prod1Mini.jpg" alt="" />
+                            </div>
+                            <section>
+                                <header class="tituloProdtuo">
+                                    <h2>Ração Hills Science Diet para Cães Adultos de Grande Porte Sabor Frango 12kg</h2>
+                                </header>
+                            </section>
+                            <section class="preco">
+                                <p>R$ 39,00</p>
+                            </section>
+                            <section class="preco2">
+                                <p>R$ 39,00</p>
+                            </section>
+                        </a>
                     </div>
-                    <section>
-                        <header class="tituloProdtuo">
-                            <h2>Ração Dogão 25kg</h2>
-                        </header>
-                    </section>
-                    <section class="preco">
-                        <p>R$ 39,00</p>
-                    </section>
-                    <section class="preco2">
-                        <p>R$ 39,00</p>
-                    </section>
-                </a>
-            </div>
 
-            <button class="btn" style="padding: 25px 111px;margin-top: 10px;">
-                <a style="color: rgb(48, 25, 107);">Comprar</a>
-            </button>
-        </div>
 
-        <div class="boxProduto">
-            <div class="categoriaProdutos">
-                <div class="badge"><h4 style="font-weight: bolder;">Hot</h4></div>
-                <a href="categoriaProdutos.php">
-                    <div class="tumbnail_imagem">
-                        <img src="img/prod1Mini.jpg" alt="" />
+                    <button class="btn" style="padding: 25px 111px;margin-top: 10px;  max-height: 500px;">
+                        <a style="color: rgb(48, 25, 107);">Comprar</a>
+                    </button>
+                </div>
+                <div class="boxProduto">
+                    <div class="categoriaProdutos">
+                        <div class="badge">
+                            <h4 style="font-weight: bolder;">Hot</h4>
+                        </div>
+                        <a href="categoriaProdutos.php">
+                            <div class="tumbnail_imagem">
+                                <img src="img/prod2Mini.jpg" alt="" />
+                            </div>
+                            <section>
+                                <header class="tituloProdtuo">
+                                    <h2>Ração Hills para Cães Filhotes de Mini e Pequeno Porte Sabor Frango</h2>
+                                </header>
+                            </section>
+                            <section class="preco">
+                                <p>R$ 39,00</p>
+                            </section>
+                            <section class="preco2">
+                                <p>R$ 39,00</p>
+                            </section>
+                        </a>
                     </div>
-                    <section>
-                        <header class="tituloProdtuo">
-                            <h2>Ração Dogão 25kg</h2>
-                        </header>
-                    </section>
-                    <section class="preco">
-                        <p>R$ 39,00</p>
-                    </section>
-                    <section class="preco2">
-                        <p>R$ 39,00</p>
-                    </section>
-                </a>
-            </div>
 
-            <button class="btn" style="padding: 25px 111px;margin-top: 10px;">
-                <a style="color: rgb(48, 25, 107);">Comprar</a>
-            </button>
-        </div>
-
-        <div class="boxProduto">
-            <div class="categoriaProdutos">
-                <div class="badge"><h4 style="font-weight: bolder;">Hot</h4></div>
-                <a href="categoriaProdutos.php">
-                    <div class="tumbnail_imagem">
-                        <img src="img/prod1Mini.jpg" alt="" />
+                    <button class="btn" style="padding: 25px 111px;margin-top: 10px;">
+                        <a style="color: rgb(48, 25, 107);">Comprar</a>
+                    </button>
+                </div>
+                <div class="boxProduto">
+                    <div class="categoriaProdutos">
+                        <div class="badge">
+                            <h4 style="font-weight: bolder;">Hot</h4>
+                        </div>
+                        <a href="categoriaProdutos.php">
+                            <div class="tumbnail_imagem">
+                                <img src="img/prod3Mini.jpg" alt="" />
+                            </div>
+                            <section>
+                                <header class="tituloProdtuo">
+                                    <h2>Ração Úmida Whiskas Sachê para Gatos Adultos Sabor Cordeiro ao Molho - 85g</h2>
+                                </header>
+                            </section>
+                            <section class="preco">
+                                <p>R$ 39,00</p>
+                            </section>
+                            <section class="preco2">
+                                <p>R$ 39,00</p>
+                            </section>
+                        </a>
                     </div>
-                    <section>
-                        <header class="tituloProdtuo">
-                            <h2>Ração Dogão 25kg</h2>
-                        </header>
-                    </section>
-                    <section class="preco">
-                        <p>R$ 39,00</p>
-                    </section>
-                    <section class="preco2">
-                        <p>R$ 39,00</p>
-                    </section>
-                </a>
-            </div>
 
-            <button class="btn" style="padding: 25px 111px;margin-top: 10px;">
-                <a style="color: rgb(48, 25, 107);">Comprar</a>
-            </button>
-        </div>
-
-        <div class="boxProduto">
-            <div class="categoriaProdutos">
-                <div class="badge"><h4 style="font-weight: bolder;">Hot</h4></div>
-                <a href="categoriaProdutos.php">
-                    <div class="tumbnail_imagem">
-                        <img src="img/prod1Mini.jpg" alt="" />
+                    <button class="btn" style="padding: 25px 111px;margin-top: 10px;">
+                        <a style="color: rgb(48, 25, 107);">Comprar</a>
+                    </button>
+                </div>
+                <div class="boxProduto">
+                    <div class="categoriaProdutos">
+                        <div class="badge">
+                            <h4 style="font-weight: bolder;">Hot</h4>
+                        </div>
+                        <a href="categoriaProdutos.php">
+                            <div class="tumbnail_imagem">
+                                <img src="img/prod5Mini.jpg" alt="" />
+                            </div>
+                            <section>
+                                <header class="tituloProdtuo">
+                                    <h2>Brinquedo Chalesco Macaco Pelúcia Marrom para Cães</h2>
+                                </header>
+                            </section>
+                            <section class="preco">
+                                <p>R$ 39,00</p>
+                            </section>
+                            <section class="preco2">
+                                <p>R$ 39,00</p>
+                            </section>
+                        </a>
                     </div>
-                    <section>
-                        <header class="tituloProdtuo">
-                            <h2>Ração Dogão 25kg</h2>
-                        </header>
-                    </section>
-                    <section class="preco">
-                        <p>R$ 39,00</p>
-                    </section>
-                    <section class="preco2">
-                        <p>R$ 39,00</p>
-                    </section>
-                </a>
-            </div>
 
-            <button class="btn" style="padding: 25px 111px;margin-top: 10px;">
-                <a style="color: rgb(48, 25, 107);">Comprar</a>
-            </button>
-        </div>
+                    <button class="btn" style="padding: 25px 111px;margin-top: 10px;">
+                        <a style="color: rgb(48, 25, 107);">Comprar</a>
+                    </button>
+                </div>
 
-        <div class="boxProduto">
-            <div class="categoriaProdutos">
-                <div class="badge"><h4 style="font-weight: bolder;">Hot</h4></div>
-                <a href="categoriaProdutos.php">
-                    <div class="tumbnail_imagem">
-                        <img src="img/prod1Mini.jpg" alt="" />
-                    </div>
-                    <section>
-                        <header class="tituloProdtuo">
-                            <h2>Ração Dogão 25kg</h2>
-                        </header>
-                    </section>
-                    <section class="preco">
-                        <p>R$ 39,00</p>
-                    </section>
-                    <section class="preco2">
-                        <p>R$ 39,00</p>
-                    </section>
-                </a>
-            </div>
-
-            <button class="btn" style="padding: 25px 111px;margin-top: 10px;">
-                <a style="color: rgb(48, 25, 107);">Comprar</a>
-            </button>
-        </div>
-        <i class="fa-solid fa-angle-right"> > </i>
-    </section>
+                <i class="fa-solid fa-angle-right"> > </i>
+    </div>
 
 
+    <!-- -------------------------------------PRODUTOS ---------------------------------------------------- -->
 </body>
 
 </html>
