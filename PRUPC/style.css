@@ -324,4 +324,12 @@ nav li a {
   color: rgb(85, 32, 218);
 }
 
-/* TESTE 2 */
+/* --------------------------Banho------------ */
+.content-banhotosa{
+  display: flex;
+  margin-top: 100px;
+}
+.img-banho{
+  display: flex;
+  width: 1345px;
+}

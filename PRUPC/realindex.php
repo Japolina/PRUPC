@@ -1,9 +1,15 @@
 <?php
+
 include_once './config/config.php';
 include_once './classes/produ.php';
+session_start();
 
 $produ = new Produ($conn);
 $data = $produ->read();
+if (!isset($_SESSION['username'])) {
+    header("Location: login.php");
+    exit();
+}
 
 ?>
 
@@ -123,6 +129,19 @@ $data = $produ->read();
 
     <!-- -------------------------------------PRODUTOS ---------------------------------------------------- -->
     <div class="carousel-produtos">
+        <?php
+        /*
+        while ($row = $data->fetch(PDO::FETCH_ASSOC)) {
+        ?>
+            <tr>
+                <td class="tabNome"><?php echo $row['nome']; ?></td>
+                <td class="tabIdade"><?php echo $row['idade']; ?></td>
+                <td class="tabAcao"> <a href="edit.php?id=<?php echo $row['id']; ?>">Editar</a> <a href="delete.php?id=<?php echo $row['id']; ?>">Excluir</a> </td>
+            </tr>
+        <?php } ?>
+        */
+
+        while ($row = $data->fetch(PDO::FETCH_ASSOC)) { ?>
         <i class="fa-solid fa-angle-left">
             < </i>
 
@@ -154,87 +173,9 @@ $data = $produ->read();
                         <a style="color: rgb(48, 25, 107);">Comprar</a>
                     </button>
                 </div>
-                <div class="boxProduto">
-                    <div class="categoriaProdutos">
-                        <div class="badge">
-                            <h4 style="font-weight: bolder;">Hot</h4>
-                        </div>
-                        <a href="categoriaProdutos.php">
-                            <div class="tumbnail_imagem">
-                                <img src="img/prod2Mini.jpg" alt="" />
-                            </div>
-                            <section>
-                                <header class="tituloProdtuo">
-                                    <h2>Ração Hills para Cães Filhotes de Mini e Pequeno Porte Sabor Frango</h2>
-                                </header>
-                            </section>
-                            <section class="preco">
-                                <p>R$ 39,00</p>
-                            </section>
-                            <section class="preco2">
-                                <p>R$ 39,00</p>
-                            </section>
-                        </a>
-                    </div>
 
-                    <button class="btn" style="padding: 25px 111px;margin-top: 10px;">
-                        <a style="color: rgb(48, 25, 107);">Comprar</a>
-                    </button>
-                </div>
-                <div class="boxProduto">
-                    <div class="categoriaProdutos">
-                        <div class="badge">
-                            <h4 style="font-weight: bolder;">Hot</h4>
-                        </div>
-                        <a href="categoriaProdutos.php">
-                            <div class="tumbnail_imagem">
-                                <img src="img/prod3Mini.jpg" alt="" />
-                            </div>
-                            <section>
-                                <header class="tituloProdtuo">
-                                    <h2>Ração Úmida Whiskas Sachê para Gatos Adultos Sabor Cordeiro ao Molho - 85g</h2>
-                                </header>
-                            </section>
-                            <section class="preco">
-                                <p>R$ 39,00</p>
-                            </section>
-                            <section class="preco2">
-                                <p>R$ 39,00</p>
-                            </section>
-                        </a>
-                    </div>
+                <?php } ?>
 
-                    <button class="btn" style="padding: 25px 111px;margin-top: 10px;">
-                        <a style="color: rgb(48, 25, 107);">Comprar</a>
-                    </button>
-                </div>
-                <div class="boxProduto">
-                    <div class="categoriaProdutos">
-                        <div class="badge">
-                            <h4 style="font-weight: bolder;">Hot</h4>
-                        </div>
-                        <a href="categoriaProdutos.php">
-                            <div class="tumbnail_imagem">
-                                <img src="img/prod5Mini.jpg" alt="" />
-                            </div>
-                            <section>
-                                <header class="tituloProdtuo">
-                                    <h2>Brinquedo Chalesco Macaco Pelúcia Marrom para Cães</h2>
-                                </header>
-                            </section>
-                            <section class="preco">
-                                <p>R$ 39,00</p>
-                            </section>
-                            <section class="preco2">
-                                <p>R$ 39,00</p>
-                            </section>
-                        </a>
-                    </div>
-
-                    <button class="btn" style="padding: 25px 111px;margin-top: 10px;">
-                        <a style="color: rgb(48, 25, 107);">Comprar</a>
-                    </button>
-                </div>
 
                 <i class="fa-solid fa-angle-right"> > </i>
     </div>

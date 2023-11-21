@@ -1,5 +1,4 @@
 <?php
-session_start();
 include '../config/config.php';
 include '../classes/User.php';
 
@@ -10,14 +9,14 @@ $user = new User($conn);
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $username = $_POST['username'];
     $password = $_POST['password'];
+    $confirm_password = $_POST['confirm_password'];
+    $email = $_POST['email'];
 
 
-    if ($user->login($username, $password)) {
-        header("realindex.php");
-        exit();
-    } else {
-        echo "Login falhou. Verifique suas credenciais.";
-    }
+    $user->register($username, $password, $confirm_password, $email);
+    header("refresh:1;url=login.php");
+
+
 }
 ?>
 
@@ -27,10 +26,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Registro</title>
 </head>
 <body>
-    <h2>Login</h2>
+    <h2>Registro</h2>
     <form method="post" action="">
         <label for="username">Usuário:</label>
         <input type="text" name="username" required><br>
@@ -40,12 +39,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <input type="password" name="password" required><br>
 
 
-        <a href="../realindex.php" type="submit"><button class="btn">Logue-se Aqui</button></a>
-        <a href="register.php">Não tem cadastro, Clique aqui!!</a>
+        <label for="confirm_password">Confirme a Senha:</label>
+        <input type="password" name="confirm_password" required><br>
+
+
+        <label for="email">E-mail:</label>
+        <input type="email" name="email" required><br>
+
+
+        <input type="submit" value="Registrar">
     </form>
 </body>
 </html>
-
-<style>
-    
-</style>

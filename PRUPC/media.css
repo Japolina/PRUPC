@@ -35,4 +35,13 @@
         gap: 30px;
         position: relative;
       }
+      /* --------------------------Banho------------ */
+.content-banhotosa{
+  display: flex;
+  margin-top: 100px;
+}
+.img-banho{
+  display: flex;
+  width: 1345px;
+}
 }
