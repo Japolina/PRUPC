@@ -13,7 +13,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 
     if ($user->login($username, $password)) {
+<<<<<<< HEAD
         header("realindex.php");
+=======
+        header("Location: realindex.php");
+>>>>>>> fac5a13c2900300a095369a70672fcd874463175
         exit();
     } else {
         echo "Login falhou. Verifique suas credenciais.";
@@ -40,7 +44,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <input type="password" name="password" required><br>
 
 
+<<<<<<< HEAD
         <a href="../realindex.php" type="submit"><button class="btn">Logue-se Aqui</button></a>
+=======
+        <input type="submit" value="Login">
+>>>>>>> fac5a13c2900300a095369a70672fcd874463175
         <a href="register.php">Não tem cadastro, Clique aqui!!</a>
     </form>
 </body>
