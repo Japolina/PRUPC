@@ -15,50 +15,39 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     $user->register($username, $password, $confirm_password, $email);
     header("refresh:1;url=login.php");
+
+
 }
 ?>
 
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <link rel="stylesheet" href="register.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro</title>
 </head>
-
 <body>
-    <header class="nav">
-        <a href="#"><img src="img/logo.png" alt="" class="logo"></a>
-        <nav>
-            <ul>
-                <li><a href="../index.php">Home</a></li>
-                <li><a href="#Produtos">Produtos</a></li>
-                <li><a href="../agenda copy/agendaBanho.php">Banho&Tosa</a></li>
-            </ul>
-        </nav>
-    </header>
+    <h2>Registro</h2>
+    <form method="post" action="">
+        <label for="username">Usuário:</label>
+        <input type="text" name="username" required><br>
 
-    <div class="containerTabela">
 
-        <div class="container login">
-            <h2 class="form__title">Faça seu cadastro abaixo</h2>
-            <form method="post" action="">
+        <label for="password">Senha:</label>
+        <input type="password" name="password" required><br>
 
-                <input class="campos" type="text" name="username" placeholder="Usuário" required><br>
-                <input class="campos" type="password" name="password" placeholder="Senha" required><br>
-                <input class="campos" type="password" name="confirm_password" placeholder="Confirme a senha" required><br>
-                <input class="campos" type="email" name="email" placeholder="Email" required><br>
 
-                <div class="containerBotoes">
-                    <a href="./login.php" type="submit" class="botaoCadastro"><button class="btn">Cadastre Aqui</button></a>
-                </div>
-            </form>
-        </div>
-    </div>
+        <label for="confirm_password">Confirme a Senha:</label>
+        <input type="password" name="confirm_password" required><br>
+
+
+        <label for="email">E-mail:</label>
+        <input type="email" name="email" required><br>
+
+
+        <input type="submit" value="Registrar">
+    </form>
 </body>
-
 </html>

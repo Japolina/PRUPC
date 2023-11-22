@@ -33,7 +33,7 @@ if (!isset($_SESSION['username'])) {
                     <li><a href="#home">Home</a></li>
                     <li><a href="#Produtos">Produtos</a></li>
                     <li><a href="#Banho&Tosa">Banho&Tosa</a></li>
-                    <li><a class="btn" href="./usuario/logout.php">Logout</a></li>
+                    <li><a class="btn" href="./usuario/login.php">Login</a></li>
                 </ul>
             </nav>
         </header>

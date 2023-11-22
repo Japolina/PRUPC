@@ -11,8 +11,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $username = $_POST['username'];
     $password = $_POST['password'];
 
+
     if ($user->login($username, $password)) {
-        header('refresh: 1; url =../realindex.php');
+<<<<<<< HEAD
+        header("realindex.php");
+=======
+        header("Location: realindex.php");
+>>>>>>> fac5a13c2900300a095369a70672fcd874463175
         exit();
     } else {
         echo "Login falhou. Verifique suas credenciais.";
@@ -23,51 +28,32 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <link rel="stylesheet" href="login.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
 </head>
-
-
-
 <body>
-<header class="nav">
-    <a href="#"><img src="img/logo.png" alt="" class="logo"></a>
-    <nav>
-        <ul>
-            <li><a href="../index.php">Home</a></li>
-            <li><a href="#Produtos">Produtos</a></li>
-            <li><a href="#Banho&Tosa">Banho&Tosa</a></li>
-        </ul>
-    </nav>
-</header>
-
-<div class="containerTabela">
+    <h2>Login</h2>
+    <form method="post" action="">
+        <label for="username">Usuário:</label>
+        <input type="text" name="username" required><br>
 
 
-    <div class="container login">
+        <label for="password">Senha:</label>
+        <input type="password" name="password" required><br>
 
-        <h2 class="form__title">Coloque seu acesso abaixo</h2>
-        <form method="post" action="">
-            <input class="campos" type="text" name="username" placeholder="Usuário" required><br>
-            <input class="campos" type="password" name="password" placeholder="Senha" required><br>
 
-            <div class="containerBotoes">
-                <a href="../realindex.php" type="submit" class="botaoLogin"><button class="btn">Logue-se Aqui</button></a>
-                <a href="register.php" class="esqueciSenha">Não tem cadastro, Clique aqui!!</a>
-            </div>
-        </form>
-    </div>
-</div>
+<<<<<<< HEAD
+        <a href="../realindex.php" type="submit"><button class="btn">Logue-se Aqui</button></a>
+=======
+        <input type="submit" value="Login">
+>>>>>>> fac5a13c2900300a095369a70672fcd874463175
+        <a href="register.php">Não tem cadastro, Clique aqui!!</a>
+    </form>
 </body>
-
 </html>
 
 <style>
-
+    
 </style>
