@@ -4,38 +4,42 @@
   justify-content: center;
   border: none;
   display: grid;
-  height: 87.7vh;
+  height: 88vh;
   place-items: center;
-  background-color: cadetblue;
+  background-color: rgb(168, 218, 120);
+  padding: 5px;
 }
+
 .form__title {
-font-weight: 300;
-margin: 0;
-margin-bottom: 3rem;
+  font-weight: 300;
+  margin: 0;
+  margin-bottom: 3rem;
   margin-top: 2rem;
   align-items: center;
   justify-content: center;
   margin-left: 100px;
 }
+
 .container {
-background-color: rgb(243, 243, 243);
-border-radius: 25px;
+  background-color: rgb(243, 243, 243);
+  border-radius: 25px;
   border: none;
-box-shadow: 0 0.9rem 1.7rem rgba(0, 0, 0, 0.25),
-  0 0.7rem 0.7rem rgba(0, 0, 0, 0.22);
-height: 470px;
-max-width: 500px;
-overflow: hidden;
-position: relative;
-width: 150%;
-margin-bottom: 10px;
+  box-shadow: 0 0.9rem 1.7rem rgba(0, 0, 0, 0.25),
+    0 0.7rem 0.7rem rgba(0, 0, 0, 0.22);
+  height: 470px;
+  max-width: 500px;
+  overflow: hidden;
+  position: relative;
+  width: 150%;
+  margin-bottom: 10px;
 }
+
 /* ------------------------------------- Header ---------------------------- */
 header {
-height: 80px;
+  height: 80px;
   display: flex;
   background-color: #2b2b2b;
-  padding-left: 900px; 
+  padding-left: 900px;
 }
 
 header .nav {
@@ -45,7 +49,7 @@ header .nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  
+
 }
 
 header .logo {
@@ -56,7 +60,7 @@ header .logo {
 nav ul {
   position: relative;
   display: flex;
-  
+
 }
 
 nav ul a {
@@ -66,7 +70,7 @@ nav ul a {
   font-size: 10px;
   display: block;
   margin-bottom: 100px;
-  
+
 }
 
 nav ul a:not(.btn)::after {
@@ -94,20 +98,33 @@ nav li a {
   text-decoration: none;
   font-size: 15px;
   margin-left: 50px;
-  
+
 }
+
 /* ------------------------------------------ Botão Login ----------------------------- */
-.containerBotoes{
+.containerBotoes {
   display: flex;
-  margin-left: 60px;
+  margin-left: 40px;
   margin-top: 25px;
 }
-.esqueciSenha{
+.textVoltar{
+  display: flex;
+  color: black;
+  font-size: 18px;
+}
+.voltar{
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  margin-left: 30px;
+}
+.esqueciSenha {
   display: flex;
   margin-top: 15px;
   font-size: 15px;
   margin-left: 15px;
 }
+
 .btn {
   background-color: #e1b000;
   color: aliceblue;
@@ -118,7 +135,7 @@ nav li a {
   transition: 0.1s;
   border: none;
   align-items: center;
-  margin-left: 120px;
+  margin-left: 100px;
 }
 
 .bnt.animate {
@@ -161,6 +178,7 @@ nav li a {
   position: relative;
   padding: 10px;
 }
+
 ----- button::before {
   content: '';
   border-radius: 1000px;
@@ -174,21 +192,49 @@ nav li a {
   opacity: 0;
   transition: all .3s ease-in-out infinite;
 }
+
 /* ------------------BOTOES------------------------ */
 
 input {
   display: flex;
   place-items: center;
-background-color: #ffffff;
-border: 1px solid rgb(134, 134, 134);
+  background-color: #ffffff;
+  border: 1px solid rgb(134, 134, 134);
   border-radius: 10px;
-padding: 0.9rem 0.9rem;
+  padding: 0.9rem 0.9rem;
   align-items: center;
   justify-content: center;
   width: 370px;
-  
+
 }
-.campos{
+
+.campos {
   display: flex;
   margin-left: 50px;
+}
+
+.img1 {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 88%;
+}
+
+.espacoBranco {
+  display: flex;
+}
+
+.espaco {
+  display: flex;
+  background-color: rgb(186, 223, 151);
+  height: 100px;
+  padding: 53px 49px;
+}
+
+.espaco2 {
+  display: flex;
+  background-color: rgb(168, 218, 120);
+  height: 300px;
+  padding: 53px 40px;
+  margin-top: 0px;
 }

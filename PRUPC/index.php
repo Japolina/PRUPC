@@ -21,7 +21,7 @@ $data = $produ->read();
 <body>
     <section class="principal" id="home">
         <header class="nav">
-            <a href="#"><img src="img/logo.png" alt="" class="logo"></a>
+            <a href="#"><img src="./img/Logo/logo2.png" alt="" class="logo"></a>
             <nav>
                 <ul>
                     <li><a href="#home">Home</a></li>

@@ -23,11 +23,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="PT-BR">
+<link rel="stylesheet" href="login.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 
 <head>
-    <link rel="stylesheet" href="login.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
@@ -47,8 +48,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 
     <div class="containerTabela">
+        <div class="img1">
+            <img src="../img/Login/fundoLoginPart1.jpg" alt="">
+            <div class="espaçoBranco">
+                <svg class="espaco" />
+                <svg class="espaco2" />
+            </div>
+            <img src="../img/Login/fundoLoginPart2.jpg" alt="">
+        </div>
         <div class="container">
-            <h2 class="form__title">Faça seu cadastro abaixo:</h2>
+            <h2 class="form__title">Coloque seu acesso abaixo</h2>
 
             <div class="campos">
                 <form method="post" action="">
@@ -60,7 +69,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <a href="../realindex.php" type="submit"><button class="btn">Logue-se Aqui</button></a>
                 <a href="register.php" class="esqueciSenha">Não tem cadastro, Clique aqui!!</a>
             </div>
-            </form>
         </div>
     </div>
 </body>

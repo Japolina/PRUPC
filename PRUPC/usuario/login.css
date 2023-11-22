@@ -6,7 +6,8 @@
     display: grid;
     height: 87.7vh;
 	  place-items: center;
-    background-color: cadetblue;
+    background-color: rgb(168, 218, 120);
+    padding: 5px;
 }
 .form__title {
 	font-weight: 300;
@@ -55,6 +56,7 @@ header {
   nav ul {
     position: relative;
     display: flex;
+    
   }
   
   nav ul a {
@@ -90,6 +92,8 @@ header {
     font-weight: 500;
     text-decoration: none;
     font-size: 15px;
+    margin-left: 50px;
+    
   }
 /* ------------------------------------------ Botão Login ----------------------------- */
 .containerBotoes{
@@ -100,8 +104,9 @@ header {
 .esqueciSenha{
     display: flex;
     margin-top: 15px;
-    font-size: 15px;
+    font-size: 16px;
     margin-left: 15px;
+    color: black;
 }
 .btn {
     background-color: #e1b000;
@@ -185,4 +190,29 @@ input {
 .campos{
     display: flex;
     margin-left: 50px;
+}
+.img1 {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 88%;
+}
+
+.espacoBranco {
+  display: flex;
+}
+
+.espaco {
+  display: flex;
+  background-color: rgb(186, 223, 151);
+  height: 100px;
+  padding: 53px 49px;
+}
+
+.espaco2 {
+  display: flex;
+  background-color: rgb(168, 218, 120);
+  height: 300px;
+  padding: 53px 40px;
+  margin-top: 0px;
 }

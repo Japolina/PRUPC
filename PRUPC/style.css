@@ -116,7 +116,7 @@ header .nav {
 
 header .logo {
   position: relative;
-  max-width: 100px;
+  padding: 100px 100px;
 }
 
 nav ul {
