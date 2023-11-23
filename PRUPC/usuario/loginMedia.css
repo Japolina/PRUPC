@@ -1,0 +1,37 @@
+@media (max-width: 1366px) {
+    .nav nav ul {
+        margin-left: 700px;
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+      
+    .form__title {
+        font-weight: 300;
+        margin: 0;
+        margin-bottom: 3rem;
+        margin-top: 2rem;
+        align-items: center;
+        justify-content: center;
+        margin-left: 100px;
+    }
+
+    .containerBotoes {
+        display: flex;
+        margin-left: 60px;
+    }
+
+    input {
+        display: flex;
+        place-items: center;
+        background-color: #ffffff;
+        border: 1px solid rgb(134, 134, 134);
+        border-radius: 10px;
+        padding: 0.9rem 0.9rem;
+        align-items: center;
+        justify-content: center;
+        width: 370px;
+
+    }
+}

@@ -32,8 +32,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 </head>
 
 <body>
-    <header class="nav">
-        <a href="#"><img src="img/logo.png" alt="" class="logo"></a>
+<header class="nav">
+        <a href="#"><img src="../img/Logo/logo2.png" alt="" class="logo"></a>
         <nav>
             <ul>
                 <li><a href="../index.php">Home</a></li>

@@ -146,10 +146,10 @@ $data = $produ->read();
                                     </header>
                                 </section>
                                 <section class="preco">
-                                    <?php echo $row['preco']; ?>
+                                    <p>R$ 59</p>
                                 </section>
                                 <section class="preco2">
-                                    <?php echo $row['preco']; ?>
+                                <p>R$ <?php echo $row['preco']; ?></p>
                                 </section>
                             </a>
                         </div>
