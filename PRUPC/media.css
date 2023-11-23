@@ -13,6 +13,14 @@
           align-items: center;
           justify-content: space-between;
       }
+      .nav nav ul {
+        margin-left: 700px;
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+      
       .titulo-vendidos{
         display: flex;
         width: 50vw;
@@ -35,6 +43,28 @@
         gap: 30px;
         position: relative;
       }
+      .boxProduto {
+        width: 275px;
+        background: #fff;
+        margin-top: 10px;
+        border: 1px solid rgb(170, 170, 170);
+        border-radius: 10px;
+        box-shadow: 0 0 20px 0px;
+        justify-content: center;
+        align-items: center;
+        max-height: 600px;
+      
+      }
+      .tituloProdtuo {
+        display: flex;
+        width: 250px;
+        padding: 10px;
+        color: rgb(48, 25, 107);
+        font-size: 15px;
+        background-color: #fff;
+        max-height: 120px;
+      }
+      
       /* --------------------------Banho------------ */
 .content-banhotosa{
   display: flex;

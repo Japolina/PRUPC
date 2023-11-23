@@ -25,15 +25,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <head>
     <link rel="stylesheet" href="register.css">
     <link rel="stylesheet" href="registerMedia.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro</title>
 </head>
 
 <body>
-    <header class="nav">
-        <a href="#"><img src="img/logo.png" alt="" class="logo"></a>
+<header class="nav">
+        <a href="#"><img src="../img/Logo/logo2.png" alt="" class="logo"></a>
         <nav>
             <ul>
                 <li><a href="../index.php">Home</a></li>

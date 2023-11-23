@@ -38,16 +38,20 @@ $data = $produ->read();
             <h2>Pelúcia & Ração <br><span>PetShop</span></h2>
             <p>Olá! Somos Pelúcias & Ração. Nascemos da alegria e do prazer que é cuidar de cães e gatos!
                 Todos os pets que recebemos são tratados assim: como se fossem nossos próprios filhos.</p>
-            <ul>
+            <div class="social">
+              <ul>
                 <li><a href="https://www.facebook.com/"><img src="./img/Social/face.png" alt=""></a></li>
                 <li><a href="https://www.instagram.com/"><img src="./img/Social/insta.png" alt=""></a></li>
 
-            </ul>
+            </ul>  
+            </div>
+            
         </div>
         <div class="imagens">
             <div class="imagemCao">
                 <img src="./img/cao.jpg" alt="">
             </div>
+            
     </section>
 
 
@@ -146,10 +150,10 @@ $data = $produ->read();
                                     </header>
                                 </section>
                                 <section class="preco">
-                                    <?php echo $row['preco']; ?>
+                                    <p>R$ 59</p>
                                 </section>
                                 <section class="preco2">
-                                    <?php echo $row['preco']; ?>
+                                <p>R$ <?php echo $row['preco']; ?></p>
                                 </section>
                             </a>
                         </div>

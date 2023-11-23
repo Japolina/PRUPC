@@ -1,8 +1,15 @@
-@media (max-width: 1366px) and (min-width: 768) {
-    
-.containerTabela {
-    height: 87.7vh;
-    background-color: rgb(123, 255, 0);
-}
+@media (max-width: 1366px) {
+    .nav nav ul {
+        margin-left: 700px;
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .containerTabela {
+        height: 87.7vh;
+        background-color: rgb(123, 255, 0);
+    }
 
 }
