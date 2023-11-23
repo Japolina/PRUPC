@@ -1,3 +1,8 @@
+body{
+  background-image: url(../img/Login/fundoLoginPartall.jpg);
+  background-size: cover;
+  background-position: center;
+}
 .containerTabela {
   display: flex;
   align-items: center;
@@ -6,7 +11,6 @@
   display: grid;
   height: 88vh;
   place-items: center;
-  background-color: rgb(168, 218, 120);
   padding: 5px;
 }
 
@@ -216,6 +220,7 @@ input {
 .img1 {
   display: flex;
   position: absolute;
+
   width: 100%;
   height: 88%;
 }

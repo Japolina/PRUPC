@@ -24,6 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 <head>
     <link rel="stylesheet" href="register.css">
+    <link rel="stylesheet" href="registerMedia.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -43,14 +44,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     </header>
 
     <div class="containerTabela">
-        <div class="img1">
-            <img src="../img/Login/fundoLoginPart1.jpg" alt="">
-            <div class="espaçoBranco">
-                <svg class="espaco" />
-                <svg class="espaco2" />
-            </div>
-            <img src="../img/Login/fundoLoginPart2.jpg" alt="">
-        </div>
         <div class="container">
             <h2 class="form__title">Faça seu cadastro abaixo</h2>
 

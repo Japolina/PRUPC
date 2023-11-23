@@ -13,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 
     if ($user->login($username, $password)) {
-        header("realindex.php");
+        header("Location: ../realindex.php");
         exit();
     } else {
         echo "Login falhou. Verifique suas credenciais.";
@@ -48,12 +48,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 
     <div class="containerTabela">
-        <div class="img1">
-            <img src="../img/Login/fundoLoginPart1.jpg" alt="">
-            <div class="espaçoBranco">
-                <svg class="espaco" />
-                <svg class="espaco2" />
-            </div>
             <img src="../img/Login/fundoLoginPart2.jpg" alt="">
         </div>
         <div class="container">

@@ -16,7 +16,7 @@ if (!isset($_SESSION['username'])) {
 
 <!DOCTYPE html>
 <html>
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="styleReal.css">
 <link rel="stylesheet" href="media.css">
 <script src="script.js" defer></script>
 
@@ -33,7 +33,7 @@ if (!isset($_SESSION['username'])) {
                     <li><a href="#home">Home</a></li>
                     <li><a href="#Produtos">Produtos</a></li>
                     <li><a href="#Banho&Tosa">Banho&Tosa</a></li>
-                    <li><a class="btn" href="./usuario/login.php">Login</a></li>
+                   <li><a class="btn" href="./usuario/logout.php">Logout</a></li>
                 </ul>
             </nav>
         </header>
@@ -56,11 +56,6 @@ if (!isset($_SESSION['username'])) {
             <div class="imagemCao">
                 <img src="./img/cao.jpg" alt="">
             </div>
-            <svg preserveAspectRatio="none" data-bbox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200" role="img" aria-label="Veterinário Canoas | Le Malí Pet Center">
-                <g>
-                    <path d="M200 100c0 55.228-44.772 100-100 100S0 155.228 0 100 44.772 0 100 0s100 44.772 100 100z"></path>
-                </g>
-            </svg>
         </div>
 
     </section>
@@ -152,18 +147,19 @@ if (!isset($_SESSION['username'])) {
                         </div>
                         <a href="categoriaProdutos.php">
                             <div class="tumbnail_imagem">
-                                <img src="img/prod1Mini.jpg" alt="" />
+                                <img src="<?php echo $row['imagem']; ?>" alt="" />
+
                             </div>
                             <section>
                                 <header class="tituloProdtuo">
-                                    <h2>Ração Hills Science Diet para Cães Adultos de Grande Porte Sabor Frango 12kg</h2>
+                                    <?php echo $row['nome']; ?>
                                 </header>
                             </section>
                             <section class="preco">
-                                <p>R$ 39,00</p>
+                            <?php echo $row['preco']; ?>
                             </section>
                             <section class="preco2">
-                                <p>R$ 39,00</p>
+                            <?php echo $row['preco']; ?>
                             </section>
                         </a>
                     </div>
@@ -182,14 +178,17 @@ if (!isset($_SESSION['username'])) {
 
 
     <!-- ------------------------------------- BANHO E TOSA ---------------------------------------------------- -->
-    <div class="content-banhotosa">
-        <div class="texto-banho"></div>
-        <div class="banner-banho">
-            <a href="./agenda copy/agendaBanho.php">
-                <img class="img-banho" src="./img/banho2.jpg" alt="">
-            </a>
+    <section class="content-banhotosa">
+        <div class="texto-banho">
+            <input type="" name="pet" placeholder="Nome do pet" class="input" required><br>
+            <input type="" name="pet" placeholder="Raça" class="input" required><br>
+            <input type="" name="pet" placeholder="Idade" class="input" required><br>
+
+            <div class="containerBotoes">
+                <a href="../realindex.php" type="submit"><button class="btn">Cadastrar pet</button></a>
+            </div>
         </div>
-    </div>
+    </section>
 </body>
 
 </html>

@@ -1,7 +1,8 @@
-@media (max-width: 1366px){
+@media (max-width: 1366px) and (min-width: 768) {
     
 .containerTabela {
     height: 87.7vh;
+    background-color: rgb(123, 255, 0);
 }
 
 }
