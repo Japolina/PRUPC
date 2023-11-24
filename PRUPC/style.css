@@ -30,7 +30,7 @@ span {
   display: flex;
   background-size: cover;
   background-position: center;
-  background-color: #94813b;
+  background-color: #816d21;
   height: 613px;
 }
 .fundoPrincipal .containerInfo{
@@ -42,37 +42,46 @@ span {
 	box-shadow: 0 0.9rem 1.7rem rgba(0, 0, 0, 0.25),
 		0 0.7rem 0.7rem rgba(0, 0, 0, 0.22);
 	height: 350px;
-	max-width: 600px;
-  max-height: 500px;
+	max-width: 500px;
 	width: 150%;
   margin-top: 80px;
-  margin-left: 100px;
-  border: 1px solid black;
+  margin-left: 80px;
 }
 .containerInfo h2{
   display: flex;
-  margin-top: 30px;
-  color: rgb(48, 25, 107);
+  margin-top: 40px;
+  padding: 20px;
+}
+.containerInfo h2{
+  display: flex;
   flex-direction: column;
-  font-size: 45px;
+  font-size: 35px;
+  font-weight: 700;
+  
+}
+.containerInfo p{
+  display: flex;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 25px;
 }
 .containerInfo .social{
   display: flex;
-  font-size: 20px;
+  
 }
-.containerInfo ul li{
-  display: flex;
-  max-width: 600px;
-  flex-direction: row;
-}
+
 .fundoPrincipal ul {
   display: flex;
   flex-direction: row;
   border: none;
   gap: 25px;
-  margin-top: 180px;
+  margin-top: 30px;
   margin-left: 25px;
 }
+li{
+  list-style: none;
+}
+
 .imagens .imagemCao{
   display: flex;
   margin-left: 300px;
@@ -151,7 +160,7 @@ span {
 header {
   display: flex;
   background-color: #2b2b2b;
-  height: 100px;
+  height: 120px;
   width: 100vw;
 }
 
@@ -184,7 +193,6 @@ nav ul a {
   text-transform: uppercase;
   font-size: 10px;
   display: block;
-  margin-top: 15px;
 }
 
 nav ul a:not(.btn)::after {
@@ -274,6 +282,8 @@ nav li a {
   border: 1px solid rgb(214, 214, 214);
   border-radius: 10px;
   color: #fff;
+  margin-bottom: 50px;
+
 }
 
 .titulo-vendidos {
@@ -286,13 +296,15 @@ nav li a {
 .carousel-produtos {
   padding: 100px;
   display: flex;
-  background-color: #fff;
+  background-color: #ffffff;
   flex-direction: row;
   align-items: center;
   gap: 30px;
   position: relative;
   max-width: 150px;
+
 }
+
 .categoriaProdutos {
 
   max-height: 500px;
@@ -337,6 +349,7 @@ nav li a {
 .boxProduto {
   width: 275px;
   background: #fff;
+  margin-top: 10px;
   border: 1px solid rgb(170, 170, 170);
   border-radius: 10px;
   box-shadow: 0 0 20px 0px;
@@ -356,46 +369,79 @@ nav li a {
 .tituloProdtuo {
   display: flex;
   width: 250px;
-  padding: 15px;
+  padding: 10px;
+  margin-bottom: 25px;
   color: rgb(48, 25, 107);
-  font-size: 20px;
-  font-weight: 700;
-  background-color: #ffffff;
-  max-height: 70px;
+  font-size: 15px;
+  background-color: #fff;
+  max-height: 120px;
 }
 
 .preco {
   display: flex;
   width: 250px;
   color: #2b2b2b;
-  font-size: 20px;
-  padding: 15px;
 
 }
 
 .preco p {
-    text-decoration: line-through;
-    
+  display: flex;
+  padding: 15px;
+
+
 }
 
 .preco2 {
   display: flex;
   padding: 15px;
-  font-size: 25px;
+  font-size: 20px;
   font-weight: bolder;
   color: rgb(85, 32, 218);
 }
 
 /* --------------------------Banho------------ */
 .content-banhotosa {
-  display: flex;
-  margin-top: 100px;
-  background-image: url(./img/banho2.jpg);
+  background-image: url(./img/banho.jpg);
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  place-items: center;
+  margin-top: 100px;
+}
+ .content{
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.466);
+  border-radius: 25px;
+  box-shadow: 0 0.9rem 1.7rem rgba(17, 17, 17, 0.25),
+    0 0.7rem 0.7rem rgba(0, 0, 0, 0.288);
+  width: 450px;
+  height: 50px;
+  max-width: 450px;
+  max-height: 50px;
+  display: grid;
+  margin-left: 450px
+}
+.content-banhotosa .content h1{
+  display: flex;
+  font-size: 25px;
+  padding: 30px;
+  color: #fff;
+  margin-top: 50px;
+  height: 5px;
 }
 
-.img-banho {
+
+/* ----------------------------FOTER--------------- */
+.contentFooter{
   display: flex;
-  width: 1345px;
+  background-color: #2b2b2b;
+  height: 110px;
+  width: 100%;
+}
+.contentFooter .logo {
+  margin-left: 40px;
+  margin-bottom: 30px;
+  width: 250px;
+  height: 150px;
 }

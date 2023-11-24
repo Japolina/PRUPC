@@ -9,7 +9,10 @@
 
     .containerTabela {
         height: 87.7vh;
-        background-color: rgb(123, 255, 0);
+        background-color: rgb(255, 255, 255);
+        height: 480px;
+        max-width: 550px;
+        margin-top: 40px;
     }
 
 }

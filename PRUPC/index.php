@@ -38,20 +38,18 @@ $data = $produ->read();
             <h2>Pelúcia & Ração <br><span>PetShop</span></h2>
             <p>Olá! Somos Pelúcias & Ração. Nascemos da alegria e do prazer que é cuidar de cães e gatos!
                 Todos os pets que recebemos são tratados assim: como se fossem nossos próprios filhos.</p>
-            <div class="social">
-              <ul>
+            <ul class="social">
                 <li><a href="https://www.facebook.com/"><img src="./img/Social/face.png" alt=""></a></li>
                 <li><a href="https://www.instagram.com/"><img src="./img/Social/insta.png" alt=""></a></li>
 
-            </ul>  
-            </div>
-            
+            </ul>
+
         </div>
         <div class="imagens">
             <div class="imagemCao">
                 <img src="./img/cao.jpg" alt="">
             </div>
-            
+
     </section>
 
 
@@ -139,7 +137,7 @@ $data = $produ->read();
                             <div class="badge">
                                 <h4 style="font-weight: bolder;">Hot</h4>
                             </div>
-                            <a href="categoriaProdutos.php">
+                            <a href="./catalogo/telaprodutos.php">
                                 <div class="tumbnail_imagem">
                                     <img src="<?php echo $row['imagem']; ?>" alt="" />
 
@@ -153,15 +151,15 @@ $data = $produ->read();
                                     <p>R$ 59</p>
                                 </section>
                                 <section class="preco2">
-                                <p>R$ <?php echo $row['preco']; ?></p>
+                                    <p>R$ <?php echo $row['preco']; ?></p>
                                 </section>
                             </a>
                         </div>
 
-
-                        <button class="btn" style="padding: 25px 111px;margin-top: 10px;  max-height: 500px;">
-                            <a style="color: rgb(48, 25, 107);">Comprar</a>
-                        </button>
+                        <a href="./catalogo/telaprodutos.php" style="color: rgb(48, 25, 107);">
+                            <button class="btn" style="padding: 25px 111px;margin-top: 10px;  max-height: 500px;">
+                                <h4>Comprar</h4>
+                            </button></a>
                     </div>
 
                 <?php } ?>
@@ -173,13 +171,26 @@ $data = $produ->read();
 
     <!-- ------------------------------------- BANHO E TOSA ---------------------------------------------------- -->
     <section class="content-banhotosa">
-        <div class="textoBanho">
-            <h3>Faça seu login para acessar nossa agenda de Banho e Tosa para seu pet!</h3>
-        </div>
-        <div class="containerBotoes">
-            <a href="./usuario/login.php" type="submit"><button class="btn">Fazer Login</button></a>
+        <div class="content">
+            <h1>Faça seu login para acessar nossa agenda de Banho e Tosa para seu pet!</h1>
+            <a href="./usuario/login.php" type="submit">
+                <button class="btn" style="padding: 25px 111px; 
+                margin-left: 80px; max-height: 500px;">
+                    Fazer Login
+                </button>
+            </a>
         </div>
     </section>
+
+    <!-- ----------------------------FOOTER --------------------------------------------------- -->
+    <footer>
+        <div class="contentFooter">
+            <div class="logo">
+            <a href="#"><img src="./img/Logo/logo2.png" alt="" class="logo"></a>
+            </div>
+        </div>
+
+    </footer>
 </body>
 
 </html>

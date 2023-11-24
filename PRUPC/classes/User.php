@@ -49,6 +49,7 @@ class User {
                 // Login bem-sucedido
                 session_start();
                 $_SESSION['username'] = $user['username'];
+                $_SESSION['id'] = $user['id'];
                 return true;
             } else {
                 // Credenciais inválidas
