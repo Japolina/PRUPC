@@ -10,7 +10,6 @@
     font-family: 'Roboto', sans-serif;
   }
   
-
   header {
     height: 100px;
     width: 98.7vw;
@@ -77,5 +76,13 @@
   }
 
   /* --------------------------Banho------------ */
-  
+  .content-banhotosa {
+    display: flex;
+    margin-top: 100px;
+  }
+
+  .img-banho {
+    display: flex;
+    width: 1345px;
+  }
 }

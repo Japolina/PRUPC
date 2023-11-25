@@ -1,83 +1,101 @@
-<?php
-session_start();
-include '../config/config.php';
-include '../classes/User.php';
-
-
-$user = new User($conn);
-
-
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-	$username = $_POST['username'];
-	$password = $_POST['password'];
-
-
-	if ($user->login($username, $password)) {
-		header("realindex.php");
-		exit();
-	} else {
-		echo "Login falhou. Verifique suas credenciais.";
-	}
-}
-?>
-
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>Slide Login</title>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-	<link rel="stylesheet" href="./style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Slider</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    #slider-container {
+      width: 80%;
+      margin: auto;
+      overflow: hidden;
+    }
+
+    #slider-wrapper {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .slide {
+      min-width: 100%;
+      box-sizing: border-box;
+    }
+
+    .slide img {
+      width: 100%;
+      height: auto;
+    }
+
+    #prev, #next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      margin-top: -25px;
+      padding: 16px;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+    }
+
+    #next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+
+    #prev:hover, #next:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+  </style>
 </head>
-
 <body>
-	<!-- partial:index.partial.html -->
-	<div class="container right-panel-active">
-		<!-- Sign Up -->
-		<div class="container__form container--signup">
-			<form action="#" class="form" id="form1" method="post">
-				<h2 class="form__title">Faça seu cadastro abaixo:</h2>
 
-				<input type="text" name="username" type="text" placeholder="Usuário" class="input" required><br>
-				<input type="email" name="email" type="email" placeholder="E-mail" class="input" required><br>
-				<input type="password" name="password" type="password" placeholder="Senha" class="input" required><br>
+<div id="slider-container">
+  <div id="slider-wrapper">
+    <div class="slide"><img src="../img/prod1Mini.jpg" alt="Product 1"></div>
+    <div class="slide"><img src="../img/prod1Mini.jpg" alt="Product 2"></div>
+    <div class="slide"><img src="product3.jpg" alt="Product 3"></div>
+    <!-- Add more slides as needed -->
+  </div>
+</div>
 
-				<input type="submit">
-				<button class="btn">Acesse neste botão</button>
-				</input>
-			</form>
-		</div>
+<button id="prev" onclick="prevSlide()">❮</button>
+<button id="next" onclick="nextSlide()">❯</button>
 
-		<!-- Sign In -->
-		<div class="container__form container--signin">
-			<form action="#" class="form" id="form2">
-				<h2 class="form__title">Coloque seus acessos abaixo</h2>
+<script>
+  let currentIndex = 0;
 
-				<input type="text" name="username" placeholder="Usuário" class="input" required><br>
-				<input type="password" name="password" required placeholder="Senha" class="input" require><br>
+  function showSlide(index) {
+    const slider = document.getElementById('slider-wrapper');
+    const slideWidth = document.querySelector('.slide').offsetWidth;
 
-				<a href="#" class="link">Esqueceu a Senha? Clique Aqui</a>
-				<a href="../realindex.php" type="submit"><button class="btn">Logue-se Aqui</button></a>
-			</form>
-		</div>
+    if (index >= 0 && index < slider.children.length) {
+      currentIndex = index;
+      slider.style.transform = `translateX(${-currentIndex * slideWidth}px)`;
+    }
+  }
 
-		<!-- Overlay -->
-		<div class="container__overlay">
-			<div class="overlay">
-				<div class="overlay__panel overlay--left">
-					<button class="btn" id="signIn">Acesse Aqui</button>
-				</div>
-				<div class="overlay__panel overlay--right">
-					<button class="btn" id="signUp">Registre-se Aqui</button>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- partial -->
-	<script src="./script.js"></script>
+  function prevSlide() {
+    showSlide(currentIndex - 1);
+  }
+
+  function nextSlide() {
+    showSlide(currentIndex + 1);
+  }
+</script>
 
 </body>
-
 </html>
