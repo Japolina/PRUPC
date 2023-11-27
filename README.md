@@ -20,7 +20,7 @@ Foi criado com 4 tabelas para o Banco de Dados sendo de Usuário, Produtos, Pets
 
 - Como foi a construção no Banco de Dados
 
-<img src="/PRUPC/img/bd.jpg"/>
+<img src="/PRUPC/img/Banco.jpg"/>
 
 
 

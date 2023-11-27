@@ -1,81 +1,54 @@
-var container = document.getElementById('container')
-var slider = document.getElementById('slider');
-var slides = document.getElementsByClassName('slide').length;
-var buttons = document.getElementsByClassName('btn');
+let currentIndex = 0;
+const slides = document.querySelectorAll('.slide');
+const totalSlides = slides.length;
 
+function showSlide(index) {
+  if (index < 0) {
+    currentIndex = totalSlides - 1;
+  } else if (index >= totalSlides) {
+    currentIndex = 0;
+  } else {
+    currentIndex = index;
+  }
 
-var currentPosition = 0;
-var currentMargin = 0;
-var slidesPerPage = 0;
-var slidesCount = slides - slidesPerPage;
-var containerWidth = container.offsetWidth;
-var prevKeyActive = false;
-var nextKeyActive = true;
-
-window.addEventListener("resize", checkWidth);
-
-function checkWidth() {
-    containerWidth = container.offsetWidth;
-    setParams(containerWidth);
+  const translateValue = -currentIndex * 100 + '%';
+  document.querySelector('.slider-container').style.transform = `translateX(${translateValue})`;
 }
 
-function setParams(w) {
-    if (w < 551) {
-        slidesPerPage = 1;
-    } else {
-        if (w < 901) {
-            slidesPerPage = 2;
-        } else {
-            if (w < 1101) {
-                slidesPerPage = 3;
-            } else {
-                slidesPerPage = 4;
-            }
-        }
-    }
-    slidesCount = slides - slidesPerPage;
-    if (currentPosition > slidesCount) {
-        currentPosition -= slidesPerPage;
-    };
-    currentMargin = - currentPosition * (100 / slidesPerPage);
-    slider.style.marginLeft = currentMargin + '%';
-    if (currentPosition > 0) {
-        buttons[0].classList.remove('inactive');
-    }
-    if (currentPosition < slidesCount) {
-        buttons[1].classList.remove('inactive');
-    }
-    if (currentPosition >= slidesCount) {
-        buttons[1].classList.add('inactive');
-    }
-}
+// Adicione botões ou outra lógica para navegar pelos slides
+//
+// VER MAIS
 
-setParams();
+document.addEventListener("DOMContentLoaded", function () {
+  const gallery = document.getElementById("carousel-produtos");
+  const verMaisBtn = document.getElementById("verMaisBtn");
 
-function slideRight() {
-    if (currentPosition != 0) {
-        slider.style.marginLeft = currentMargin + (100 / slidesPerPage) + '%';
-        currentMargin += (100 / slidesPerPage);
-        currentPosition--;
-    };
-    if (currentPosition === 0) {
-        buttons[0].classList.add('inactive');
-    }
-    if (currentPosition < slidesCount) {
-        buttons[1].classList.remove('inactive');
-    }
-};
+  let offset = 0; // Offset para controle da consulta ao banco de dados
 
-function slideLeft() {
-    if (currentPosition != slidesCount) {
-        slider.style.marginLeft = currentMargin - (100 / slidesPerPage) + '%';
-        currentMargin -= (100 / slidesPerPage);
-        currentPosition++;
-    };
-    if (currentPosition == slidesCount) {
-        buttons[1].classList.add('inactive');
-    }
-    if (currentPosition > 0) {
-        buttons[0].classList.remove('inactive');
-    }
-};
+  // Função para carregar mais fotos
+  function carregarMaisFotos() {
+      // Substitua o código abaixo pela lógica real de consulta ao banco de dados
+      const novasFotos = [
+          "foto1.jpg",
+          "foto2.jpg",
+          // Adicione mais fotos conforme necessário
+      ];
+
+      // Adicionar novas fotos à galeria
+      novasFotos.forEach((fotoSrc) => {
+          const img = document.createElement("img");
+          img.src = fotoSrc;
+          img.classList.add("photo");
+          carousel-produtos.appendChild(img);
+      });
+
+      // Incrementar o offset para a próxima consulta ao banco de dados
+      offset += novasFotos.length;
+  }
+
+  // Evento de clique no botão "Ver Mais"
+  verMaisBtn.addEventListener("click", carregarMaisFotos);
+
+  // Carregar as primeiras fotos
+  carregarMaisFotos();
+});

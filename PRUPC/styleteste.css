@@ -294,6 +294,7 @@ nav li a {
 }
 
 /* --------------------------Produtos------------ */
+
 .carousel-produtos {
   padding: 100px;
   display: flex;
@@ -433,6 +434,7 @@ nav li a {
   margin-top: 150px;
   height: 90vh;
  /* place-items: center;*/
+  border: 1px solid black;
 }
 
 .imgFundo{
