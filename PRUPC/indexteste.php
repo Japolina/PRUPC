@@ -146,7 +146,7 @@ $data = $produ->read();
         }
 
         .slide img i:first-child {
-            left: 25px;
+            left: 2px;
         }
 
         .slide img i:last-child {
@@ -161,7 +161,6 @@ $data = $produ->read();
             top: 50%;
             width: auto;
             margin-top: -25px;
-            color: white;
             font-weight: bold;
             font-size: 20px;
             transition: 0.6s ease;
@@ -184,11 +183,13 @@ $data = $produ->read();
 
 
     <div id="slider-container">
+        
         <?php
 
-        while ($row = $data->fetch(PDO::FETCH_ASSOC)) { ?>
-            <button id="prev" onclick="prevSlide()">❮</button>
-            <div id="slider-wrapper">
+        while ($row = $data->fetch(PDO::FETCH_ASSOC)) { ?><button id="prev" onclick="prevSlide()">❮</button>
+        <ul>
+            <li>
+                <div id="slider-wrapper">
 
                 <div class="slide">
                     <div class="badge">
@@ -208,15 +209,18 @@ $data = $produ->read();
                             <p>R$ <?php echo $row['preco']; ?></p>
                         </section>
                     </a>
-                </div>
+                </div><button id="next" onclick="nextSlide()">❯</button>
 
-                <button id="next" onclick="nextSlide()">❯</button>
                 <!-- Add more slides as needed -->
             </div>
+            </li>
+        </ul>
+            
 
         <?php } ?>
 
 
+        
 
     </div>
 
