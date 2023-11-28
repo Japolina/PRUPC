@@ -195,7 +195,7 @@ if (isset($_POST['form1'])) {
         <div id="slider-wrapper">
             <?php
             $count = 0;
-            while ($row = $data->fetch(PDO::FETCH_ASSOC)) { ?>
+            while ($row = $data->fetch(PDO::FETCH_ASSOC)) { if($count < 5){?>
                 <div class="slide">
 
 
@@ -219,7 +219,7 @@ if (isset($_POST['form1'])) {
 
                     </a>
                 </div>
-            <?php } ?>
+            <?php } $count++; } ?>
 
             <!-- Add more slides as needed -->
         </div>
