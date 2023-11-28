@@ -40,7 +40,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <nav>
             <ul>
                 <li><a href="../index.php">Home</a></li>
-                <li><a href="../index.php#Produtos">Produtos</a></li>
+                <li><a href="../index.php#slider-container">Produtos</a></li>
                 <li><a href="../index.php#Banho&Tosa">Banho&Tosa</a></li>
             </ul>
         </nav>

@@ -147,7 +147,6 @@ li{
   border-radius: 1000px;
   min-width: calc(300px + 12px);
   min-height: calc(60px + 12px);
-  /* border: 1px solid #26456d; */
   position: absolute;
   top: 50%;
   left: 50%;
@@ -294,72 +293,56 @@ nav li a {
 }
 
 /* --------------------------Produtos------------ */
-.carousel-produtos {
-  padding: 100px;
+
+
+
+#slider-container {
   display: flex;
-  background-color: #ffffff;
+  width: 100%;
+  height: 500px;
+  margin: auto;
+  overflow: hidden;
   flex-direction: row;
+}
+
+#slider-wrapper {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 1500px;
+  justify-content: center;
   align-items: center;
-  gap: 30px;
-  position: relative;
-  max-width: 150px;
-
+  max-height: 600px;
+  gap: 50px;
+  margin-left: 100px;
 }
 
-.categoriaProdutos {
+.slide {
+  box-sizing: border-box;
+  border: 1px solid rgb(170, 170, 170);
+  border-radius: 10px;
+  box-shadow: 0 0 20px 0px;
+  height: 420px;
+}
 
+.slide img {
   max-height: 500px;
+  max-width: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0px auto;
 }
 
-.carousel-produtos i {
-  background-color: rgb(48, 25, 107);
-  color: #fff;
-  height: 46px;
-  width: 46px;
-  cursor: pointer;
-  font-size: 1.2rem;
-  text-align: center;
-  line-height: 46px;
-  border-radius: 50%;
-  position: absolute;
-  transform: translate(-50%);
-  transform: translateY(-50%);
-
-}
-
-.carousel-produtos i:first-child {
-  left: 25px;
-}
-
-.carousel-produtos i:last-child {
-  right: -1158px;
-}
-
-.badge {
+.hot {
   display: flex;
   width: 60px;
   margin-top: 15px;
   font-size: 13px;
   font-weight: 700;
-  background: red;
+  background: rgb(84, 0, 122);
   color: #fff;
   padding: 3px 10px;
-  border: 1px solid red;
   border-radius: 3px;
-}
-
-.boxProduto {
-  width: 275px;
-  background: #fff;
-  margin-top: 10px;
-  border: 1px solid rgb(170, 170, 170);
-  border-radius: 10px;
-  box-shadow: 0 0 20px 0px;
-  justify-content: center;
-  align-items: center;
-  max-height: 600px;
-  transition: transform 0.5s ease-in-out;
-
 }
 #prev, #next {
   cursor: pointer;
@@ -385,44 +368,51 @@ nav li a {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-.tumbnail_imagem {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 
-}
-
-.tituloProdtuo {
+#tituloProduto {
   display: flex;
   width: 250px;
-  padding: 10px;
   margin-bottom: 25px;
   color: rgb(48, 25, 107);
-  font-size: 15px;
+  font-size: 20px;
   background-color: #fff;
-  max-height: 120px;
+  max-height: 25px;
 }
 
-.preco {
-  display: flex;
-  width: 250px;
-  color: #2b2b2b;
-
-}
-
-.preco p {
-  display: flex;
-  padding: 15px;
-
-
-}
-
-.preco2 {
+#preco2 {
   display: flex;
   padding: 15px;
   font-size: 20px;
   font-weight: bolder;
-  color: rgb(85, 32, 218);
+  color: rgb(84, 0, 122);
+  max-height: 10px;
+  
+}
+.btnCompra{
+  background-color: #e1b000;
+  color: aliceblue;
+  padding: 15px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  display: inline-block;
+  transition: 0.1s;
+}
+.btnCompra.animate {
+  animation: animate-outline 1s ease-ou infinite;
+}
+
+.btnCompra:hover {
+  background-color: rgb(206, 144, 0);
+}
+
+@keyframes animate-outline {
+  from {
+    outline: 0px solid #e1b000;
+  }
+
+  to {
+    outline: 15px solid #e1b000;
+  }
 }
 
 /* --------------------------Banho------------ */

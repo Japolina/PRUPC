@@ -58,6 +58,35 @@ if (isset($_POST['form1'])) {
 
 <head>
     <title>Pelúcias & Ração </title>
+    <style>
+        #prev,
+        #next {
+            cursor: pointer;
+            position: absolute;
+            width: auto;
+            margin-top: 950px;
+            margin-right: 10px;
+            margin-left: 50px;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            background-color: rgb(48, 25, 107);
+            ;
+        }
+
+        #next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        #prev:hover,
+        #next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+    </style>
 </head>
 
 <body>
@@ -157,61 +186,87 @@ if (isset($_POST['form1'])) {
 
 
     <!-- -------------------------------------PRODUTOS ---------------------------------------------------- -->
-    <div class="carousel-produtos">
-        <i class="fa-solid fa-angle-left"> < </i>
-        <?php
-        /*
-        while ($row = $data->fetch(PDO::FETCH_ASSOC)) {
-        ?>
-            <tr>
-                <td class="tabNome"><?php echo $row['nome']; ?></td>
-                <td class="tabIdade"><?php echo $row['idade']; ?></td>
-                <td class="tabAcao"> <a href="edit.php?id=<?php echo $row['id']; ?>">Editar</a> <a href="delete.php?id=<?php echo $row['id']; ?>">Excluir</a> </td>
-            </tr>
-        <?php } ?>
-        */
+    <div id="slider-container">
 
-        while ($row = $data->fetch(PDO::FETCH_ASSOC)) { ?>
-            
-               
 
-                    <div class="boxProduto">
-                        <div class="categoriaProdutos">
-                            <div class="badge">
-                                <h4 style="font-weight: bolder;">Hot</h4>
-                            </div>
-                            <a href="categoriaProdutos.php">
-                                <div class="tumbnail_imagem">
-                                    <img src="<?php echo $row['imagem']; ?>" alt="" />
 
-                                </div>
-                                <section>
-                                    <header class="tituloProdtuo">
-                                        <?php echo $row['nome']; ?>
-                                    </header>
-                                </section>
-                                <section class="preco2">
-                                   R$ <?php echo $row['preco']; ?>
-                                </section>
-                            </a>
-                        </div>
+
+        <div id="slider-wrapper">
+            <?php
+            $count = 0;
+            while ($row = $data->fetch(PDO::FETCH_ASSOC)) { ?>
+                <div class="slide">
+
+
+                    <h4 class="hot" style="font-weight: bolder;">Hot</h4>
+
+                    <a href="./usuario/login.php">
+
+                        <img src="<?php echo $row['imagem']; ?>" alt="" />
+
+                        <h2 id="tituloProduto"> <?php echo $row['nome'];  ?></h2>
+
+
+
+                        <p id="preco2">R$ <?php echo $row['preco']; ?></p>
 
                         <a href="https://wa.me/555197614233?text=Tenho%20interesse%20em%20comprar%20<?php echo $row['nome'] ?>%20de%20id=%20<?php echo $row['id'] ?>">
                             <button class="btn" style="padding: 25px 111px;margin-top: 10px;  max-height: 500px;">
                                 Comprar
                             </button>
                         </a>
-                    </div>
 
-                <?php } ?>
+                    </a>
+                </div>
+            <?php } ?>
+
+            <!-- Add more slides as needed -->
+        </div>
+
+        <button id='prev' onclick='prevSlide()'>❮</button>
+        <button id="next" onclick="nextSlide()">❯</button>
 
 
-                <i class="fa-solid fa-angle-right"> > </i>
+
+
+
+
+
+
     </div>
 
 
+
+    <script>
+        let currentIndex1 = 0;
+
+        function showSlide(index) {
+            const slider = document.getElementById('slider-wrapper');
+            const slideWidth = document.querySelector('.slide').offsetWidth;
+
+            if (index >= 0 && index <= slider.children.length) {
+                currentIndex1 = index;
+
+                slider.style.transform = `translateX(${-currentIndex1 * slideWidth}px)`;
+
+            }
+        }
+
+        function prevSlide() {
+            showSlide(currentIndex1 - 1);
+        }
+
+        function nextSlide() {
+            showSlide(currentIndex1 + 1);
+        }
+    </script>
+
+
+
+
+
     <!-- ------------------------------------- BANHO E TOSA ---------------------------------------------------- -->
-    <div class="content-banhotosa">
+    <div class="content-banhotosa" id="Banho&Tosa">
         <div class="content">
 
             <form method="post">

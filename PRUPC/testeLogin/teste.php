@@ -66,8 +66,11 @@
 <div id="slider-container">
   <div id="slider-wrapper">
     <div class="slide"><img src="../img/prod1Mini.jpg" alt="Product 1"></div>
-    <div class="slide"><img src="../img/prod1Mini.jpg" alt="Product 2"></div>
-    <div class="slide"><img src="product3.jpg" alt="Product 3"></div>
+    <div class="slide"><img src="../img/prod1Mini.jpg" alt="Product 1"></div>
+    <div class="slide"><img src="../img/prod1Mini.jpg" alt="Product 1"></div>
+    <div class="slide"><img src="../img/prod1Mini.jpg" alt="Product 1"></div>
+    <div class="slide"><img src="../img/prod1Mini.jpg" alt="Product 1"></div>
+     
     <!-- Add more slides as needed -->
   </div>
 </div>

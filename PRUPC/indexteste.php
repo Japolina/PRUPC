@@ -11,12 +11,46 @@ $data = $produ->read();
 
 <!DOCTYPE html>
 <html>
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="media.css">
+<link rel="stylesheet" href="styleteste.css">
+<!--<link rel="stylesheet" href="media.css">-->
 <script src="script.js" defer></script>
 
 <head>
     <title>Pelúcias & Ração </title>
+    <style>
+        #prev,
+        #next {
+            cursor: pointer;
+            position: absolute;
+            width: auto;
+            margin-top: 950px;
+            margin-right: 10px;
+            margin-left: 50px;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            background-color: rgb(48, 25, 107);
+            ;
+        }
+
+        #next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        #prev:hover,
+        #next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+    </style>
+
+
+
+
+
 </head>
 
 
@@ -116,133 +150,78 @@ $data = $produ->read();
 
     <!-- -------------------------------------PRODUTOS ---------------------------------------------------- -->
 
-    <style>
-        #slider-container {
-            padding: 100px;
-            display: flex;
-            background-color: #ffffff;
-            flex-direction: row;
-            align-items: center;
-            gap: 30px;
-            position: relative;
-            max-width: 150px;
-        }
-
-        #slider-wrapper {
-            width: 275px;
-            background: #fff;
-            margin-top: 10px;
-            border: 1px solid rgb(170, 170, 170);
-            border-radius: 10px;
-            box-shadow: 0 0 20px 0px;
-            justify-content: center;
-            align-items: center;
-            max-height: 600px;
-            transition: transform 0.5s ease-in-out;
-        }
-
-        .slide {
-            max-height: 500px;
-        }
-
-        .slide img i:first-child {
-            left: 2px;
-        }
-
-        .slide img i:last-child {
-            right: -1158px;
-        }
-
-
-        #prev,
-        #next {
-            cursor: pointer;
-            position: absolute;
-            top: 50%;
-            width: auto;
-            margin-top: -25px;
-            font-weight: bold;
-            font-size: 20px;
-            transition: 0.6s ease;
-            border-radius: 0 3px 3px 0;
-            user-select: none;
-            background-color: purple;
-            color: white;
-        }
-
-        #next {
-            right: 0;
-            border-radius: 3px 0 0 3px;
-        }
-
-        #prev:hover,
-        #next:hover {
-            background-color: rgba(0, 0, 0, 0.8);
-        }
-    </style>
-
 
     <div id="slider-container">
-        
-        <?php
 
-        while ($row = $data->fetch(PDO::FETCH_ASSOC)) { ?><button id="prev" onclick="prevSlide()">❮</button>
-        <ul>
-            <li>
-                <div id="slider-wrapper">
 
+
+
+        <div id="slider-wrapper">
+            <?php
+            $count = 0;
+            while ($row = $data->fetch(PDO::FETCH_ASSOC)) { ?>
                 <div class="slide">
-                    <div class="badge">
-                        <h4 style="font-weight: bolder;">Hot</h4>
-                    </div>
+
+
+                    <h4 class="hot" style="font-weight: bolder;">Hot</h4>
+
                     <a href="./usuario/login.php">
-                        <div class="tumbnail_imagem">
-                            <img src="<?php echo $row['imagem']; ?>" alt="" />
 
-                        </div>
-                        <section>
-                            <header class="tituloProdtuo">
-                                <?php echo $row['nome']; ?>
-                            </header>
-                        </section>
-                        <section class="preco2">
-                            <p>R$ <?php echo $row['preco']; ?></p>
-                        </section>
+                        <img src="<?php echo $row['imagem']; ?>" alt="" />
+
+                        <h2 id="tituloProduto"> <?php echo $row['nome'];  ?></h2>
+
+
+
+                        <p id="preco2">R$ <?php echo $row['preco']; ?></p>
+
+                        <a href="./usuario/login.php" style="color: rgb(48, 25, 107);">
+                            <button class="btnCompra" style="padding: 25px 111px;margin-top: 10px;  max-height: 500px;">
+                                <h4>Comprar</h4>
+                            </button></a>
+
                     </a>
-                </div><button id="next" onclick="nextSlide()">❯</button>
+                </div>
+            <?php } ?>
 
-                <!-- Add more slides as needed -->
-            </div>
-            </li>
-        </ul>
-            
+            <!-- Add more slides as needed -->
+        </div>
 
-        <?php } ?>
+        <button id='prev' onclick='prevSlide()'>❮</button>
+        <button id="next" onclick="nextSlide()">❯</button>
 
 
-        
+
+
+
+
+
 
     </div>
 
+
+
     <script>
-        let currentIndex = 0;
+        let currentIndex1 = 0;
 
         function showSlide(index) {
             const slider = document.getElementById('slider-wrapper');
             const slideWidth = document.querySelector('.slide').offsetWidth;
 
-            if (index >= 0 && index < slider.children.length) {
-                currentIndex = index;
-                slider.style.transform = `translateX(${-currentIndex * slideWidth}px)`;
+            if (index >= 0 && index <= slider.children.length) {
+                currentIndex1 = index;
+
+                slider.style.transform = `translateX(${-currentIndex1 * slideWidth}px)`;
+
             }
         }
 
         function prevSlide() {
-            showSlide(currentIndex - 1);
+            showSlide(currentIndex1 - 1);
         }
 
         function nextSlide() {
-            showSlide(currentIndex + 1);
+            showSlide(currentIndex1 + 1);
         }
     </script>
 

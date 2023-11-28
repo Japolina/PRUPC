@@ -11,12 +11,46 @@ $data = $produ->read();
 
 <!DOCTYPE html>
 <html>
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="media.css">
+<link rel="stylesheet" href="styleteste.css">
+<!--<link rel="stylesheet" href="media.css">-->
 <script src="script.js" defer></script>
 
 <head>
     <title>Pelúcias & Ração </title>
+    <style>
+        #prev,
+        #next {
+            cursor: pointer;
+            position: absolute;
+            width: auto;
+            margin-top: 950px;
+            margin-right: 10px;
+            margin-left: 50px;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            background-color: rgb(48, 25, 107);
+            ;
+        }
+
+        #next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        #prev:hover,
+        #next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+    </style>
+
+
+
+
+
 </head>
 
 
@@ -26,7 +60,7 @@ $data = $produ->read();
         <nav>
             <ul>
                 <li><a href="#home">Home</a></li>
-                <li><a href="#Produtos">Produtos</a></li>
+                <li><a href="#slider-container">Produtos</a></li>
                 <li><a href="#Banho&Tosa">Banho&Tosa</a></li>
                 <li><a class="btn" href="./usuario/login.php">Login</a></li>
             </ul>
@@ -116,61 +150,84 @@ $data = $produ->read();
 
     <!-- -------------------------------------PRODUTOS ---------------------------------------------------- -->
 
-    <div class="carousel-produtos">
-        <i class="fa-solid fa-angle-left"> < </i>
-        <?php
-        /*
-        while ($row = $data->fetch(PDO::FETCH_ASSOC)) {
-        ?>
-            <tr>
-                <td class="tabNome"><?php echo $row['nome']; ?></td>
-                <td class="tabIdade"><?php echo $row['idade']; ?></td>
-                <td class="tabAcao"> <a href="edit.php?id=<?php echo $row['id']; ?>">Editar</a> <a href="delete.php?id=<?php echo $row['id']; ?>">Excluir</a> </td>
-            </tr>
-        <?php } ?>
-        */
 
-        while ($row = $data->fetch(PDO::FETCH_ASSOC)) { ?>
-            
-                
+    <div id="slider-container">
 
-                    <div class="boxProduto" id="slide">
-                        <div class="categoriaProdutos">
-                            <div class="badge">
-                                <h4 style="font-weight: bolder;">Hot</h4>
-                            </div>
-                            <a href="./usuario/login.php">
-                                <div class="tumbnail_imagem">
-                                    <img src="<?php echo $row['imagem']; ?>" alt="" />
 
-                                </div>
-                                <section>
-                                    <header class="tituloProdtuo">
-                                        <?php echo $row['nome']; ?>
-                                    </header>
-                                </section>
-                                <section class="preco2">
-                                    <p>R$ <?php echo $row['preco']; ?></p>
-                                </section>
-                            </a>
-                        </div>
+
+
+        <div id="slider-wrapper">
+            <?php
+            $count = 0;
+            while ($row = $data->fetch(PDO::FETCH_ASSOC)) { ?>
+                <div class="slide">
+
+
+                    <h4 class="hot" style="font-weight: bolder;">Hot</h4>
+
+                    <a href="./usuario/login.php">
+
+                        <img src="<?php echo $row['imagem']; ?>" alt="" />
+
+                        <h2 id="tituloProduto"> <?php echo $row['nome'];  ?></h2>
+
+
+
+                        <p id="preco2">R$ <?php echo $row['preco']; ?></p>
 
                         <a href="./usuario/login.php" style="color: rgb(48, 25, 107);">
-                            <button class="btn" style="padding: 25px 111px;margin-top: 10px;  max-height: 500px;">
+                            <button class="btnCompra" style="padding: 25px 111px;margin-top: 10px;  max-height: 500px;">
                                 <h4>Comprar</h4>
                             </button></a>
-                    </div>
 
-                   
-                <?php } ?>
+                    </a>
+                </div>
+            <?php } ?>
 
- <i class="fa-solid fa-angle-right"> > </i>
+            <!-- Add more slides as needed -->
+        </div>
+
+        <button id='prev' onclick='prevSlide()'>❮</button>
+        <button id="next" onclick="nextSlide()">❯</button>
+
+
+
+
+
+
+
 
     </div>
 
 
+
+    <script>
+        let currentIndex1 = 0;
+
+        function showSlide(index) {
+            const slider = document.getElementById('slider-wrapper');
+            const slideWidth = document.querySelector('.slide').offsetWidth;
+
+            if (index >= 0 && index <= slider.children.length) {
+                currentIndex1 = index;
+
+                slider.style.transform = `translateX(${-currentIndex1 * slideWidth}px)`;
+
+            }
+        }
+
+        function prevSlide() {
+            showSlide(currentIndex1 - 1);
+        }
+
+        function nextSlide() {
+            showSlide(currentIndex1 + 1);
+        }
+    </script>
+
+
     <!-- ------------------------------------- BANHO E TOSA ---------------------------------------------------- -->
-    <section class="content-banhotosa">
+    <section class="content-banhotosa" id="Banho&Tosa">
         <div class="imgFundo">
             <div class="contentBanho">
                 <h1>Faça seu login para acessar nossa agenda de Banho e Tosa para seu pet!</h1>
@@ -190,7 +247,7 @@ $data = $produ->read();
                 <a href="#"><img src="./img/Logo/logo2.png" alt="" class="logo"></a>
             </div>
             <div class="copy">
-            <h1>Copyright © Pelúcias & Ração</h1>
+                <h1>Copyright © Pelúcias & Ração</h1>
             </div>
             <div class="social">
                 <ul>
