@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Vina+Sans&display=swap');
 
 * {
   margin: 0;
@@ -12,7 +13,9 @@
 }
 
 span {
-  color: #e1b000;
+  color: rgb(82, 169, 209);
+  margin-left: 60px;
+  /* color: #e1b000; */
 }
 
 .content {
@@ -30,45 +33,45 @@ span {
   display: flex;
   background-size: cover;
   background-position: center;
-  background-image: url(./img/fundo.jpg);
+  background-image: url(./img/novo/fundo.jpeg);
   background-repeat: no-repeat;
   height: 613px;
 }
-.fundoPrincipal .containerInfo{
+
+.fundoPrincipal .containerInfo {
   display: flex;
   flex-direction: column;
-  background-color: rgba(0, 0, 0, 0.459);
-	border-radius: 25px;
-    border: none;
-	box-shadow: 0 0.9rem 1.7rem rgba(0, 0, 0, 0.25),
-		0 0.7rem 0.7rem rgba(0, 0, 0, 0.22);
-	height: 400px;
-	max-width: 500px;
-	width: 150%;
+  height: 400px;
+  max-width: 500px;
+  width: 170%;
   margin-top: 80px;
   margin-left: 80px;
 }
-.containerInfo h2{
+
+.containerInfo h2 {
   display: flex;
   margin-top: 40px;
   padding: 20px;
-  color: #fff;
+  color: #e1b000;
   display: flex;
   flex-direction: column;
-  font-size: 35px;
+  font-size: 45px;
   font-weight: 700;
-  
+  margin-left: 80px;
+
 }
-.containerInfo p{
+
+.containerInfo p {
   display: flex;
   font-size: 20px;
   font-weight: 700;
   padding: 25px;
-  color: #fff;
+  color: #e1b000;
 }
-.containerInfo .social{
+
+.containerInfo .social {
   display: flex;
-  
+
 }
 
 .fundoPrincipal ul {
@@ -79,11 +82,12 @@ span {
   margin-top: 30px;
   margin-left: 25px;
 }
-li{
+
+li {
   list-style: none;
 }
 
-.imagens .imagemCao{
+.imagens .imagemCao {
   display: flex;
   margin-left: 300px;
   margin-top: 20px;
@@ -160,8 +164,8 @@ li{
 header {
   display: flex;
   background-color: #2b2b2b;
-  height: 120px;
-  width: 100vw;
+  height: 100px;
+  width: 98.8vw;
 }
 
 header .nav {
@@ -169,7 +173,7 @@ header .nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  
+
 }
 
 header .logo {
@@ -180,7 +184,7 @@ header .logo {
 }
 
 .nav nav ul {
-  margin-left: 500px;
+  margin-left: 750px;
   margin-top: 20px;
   display: flex;
   justify-content: space-around;
@@ -225,10 +229,10 @@ nav li a {
 /* --------------------------VANTAGENS --------------------------- */
 .homeVantages {
   display: flex;
-  width: 100vw;
+  width: 10vw;
   padding: 30px;
   margin-bottom: 30px;
-  max-width: 150px;
+  margin-left: 65px;
 }
 
 .advantage-list {
@@ -278,18 +282,20 @@ nav li a {
   margin-left: 350px;
   justify-content: center;
   align-items: center;
-  background-color: rgb(48, 25, 107);
-  border: 1px solid rgb(214, 214, 214);
+  background-image: url(./img/novo/patinhas2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   border-radius: 10px;
   color: #fff;
   margin-bottom: 50px;
-
 }
 
 .titulo-vendidos {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 25px;
 }
 
 /* --------------------------Produtos------------ */
@@ -344,7 +350,9 @@ nav li a {
   padding: 3px 10px;
   border-radius: 3px;
 }
-#prev, #next {
+
+#prev,
+#next {
   cursor: pointer;
   position: absolute;
   top: 50%;
@@ -364,7 +372,8 @@ nav li a {
   border-radius: 3px 0 0 3px;
 }
 
-#prev:hover, #next:hover {
+#prev:hover,
+#next:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
@@ -386,9 +395,10 @@ nav li a {
   font-weight: bolder;
   color: rgb(84, 0, 122);
   max-height: 10px;
-  
+
 }
-.btnCompra{
+
+.btnCompra {
   background-color: #e1b000;
   color: aliceblue;
   padding: 15px 20px;
@@ -397,6 +407,7 @@ nav li a {
   display: inline-block;
   transition: 0.1s;
 }
+
 .btnCompra.animate {
   animation: animate-outline 1s ease-ou infinite;
 }
@@ -421,19 +432,20 @@ nav li a {
   align-items: center;
   justify-content: center;
   margin-top: 150px;
-  height: 90vh;
- /* place-items: center;*/
+  height: 75vh;
+  /* place-items: center;*/
 }
 
-.imgFundo{
-  background-image: url(./img/banho.jpg);
+.imgFundo {
+  background-image: url(./img/novo/banho.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   height: 600px;
   width: 100vw;
 }
- .contentBanho{
+
+.contentBanho {
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -443,27 +455,31 @@ nav li a {
     0 0.7rem 0.7rem rgba(0, 0, 0, 0.288);
   width: 550px;
   height: 350px;
- flex-direction: column;
+  flex-direction: column;
   margin: 0px auto;
   margin-top: 100px;
 }
-.content-banhotosa .contentBanho h1{
+
+.content-banhotosa .contentBanho h1 {
   align-items: center;
   justify-content: center;
   font-size: 25px;
   color: #fff;
   width: 450px;
   margin-top: 50px;
- 
+
 }
+
 .btn2 {
   background-color: #e1b000;
   color: aliceblue;
-  padding: 15px 20px;
+  padding: 25px 55px;
   border-radius: 10px;
   cursor: pointer;
   display: inline-block;
   transition: 0.1s;
+  font-size: 15px;
+  font-weight: 700;
 }
 
 .bnt2.animate {
@@ -485,7 +501,7 @@ nav li a {
 }
 
 /* ----------------------------FOTER--------------- */
-.contentFooter{
+.contentFooter {
   display: flex;
   background-color: #2b2b2b;
   height: 110px;
@@ -493,23 +509,27 @@ nav li a {
   flex-direction: row;
   gap: 250px;
 }
+
 .contentFooter .logo {
   margin-left: 40px;
   width: 180px;
   height: 100px;
 }
-.contentFooter .copy{
+
+.contentFooter .copy {
   display: flex;
   color: #fff;
   align-items: center;
   font-size: 10px;
   margin-left: 50px;
 }
-.contentFooter .social{
+
+.contentFooter .social {
   display: flex;
   width: 300px;
 }
-.contentFooter .social ul{
+
+.contentFooter .social ul {
   display: flex;
   flex-direction: row;
   align-items: center;

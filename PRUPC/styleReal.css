@@ -12,7 +12,9 @@
 }
 
 span {
-  color: #e1b000;
+  color: rgb(82, 169, 209);
+  margin-left: 60px;
+  /* color: #e1b000; */
 }
 
 .content {
@@ -30,21 +32,16 @@ span {
   display: flex;
   background-size: cover;
   background-position: center;
-  background-image: url(./img/fundo.jpg);
+  background-image: url(./img/novo/fundo.jpeg);
   background-repeat: no-repeat;
   height: 613px;
 }
 .fundoPrincipal .containerInfo{
   display: flex;
   flex-direction: column;
-  background-color: rgba(0, 0, 0, 0.459);
-	border-radius: 25px;
-    border: none;
-	box-shadow: 0 0.9rem 1.7rem rgba(0, 0, 0, 0.25),
-		0 0.7rem 0.7rem rgba(0, 0, 0, 0.22);
 	height: 400px;
 	max-width: 500px;
-	width: 150%;
+	width: 170%;
   margin-top: 80px;
   margin-left: 80px;
 }
@@ -52,11 +49,12 @@ span {
   display: flex;
   margin-top: 40px;
   padding: 20px;
-  color: #fff;
+  color: #e1b000;
   display: flex;
   flex-direction: column;
-  font-size: 35px;
+  font-size: 45px;
   font-weight: 700;
+  margin-left: 80px;
   
 }
 .containerInfo p{
@@ -64,7 +62,7 @@ span {
   font-size: 20px;
   font-weight: 700;
   padding: 25px;
-  color: #fff;
+  color: #e1b000;
 }
 .containerInfo .social{
   display: flex;
@@ -88,6 +86,7 @@ li{
   margin-left: 300px;
   margin-top: 20px;
 }
+
 
 /* ------------------------------------------ Botão Login ----------------------------- */
 
@@ -160,8 +159,8 @@ li{
 header {
   display: flex;
   background-color: #2b2b2b;
-  height: 120px;
-  width: 100vw;
+  height: 100px;
+  width: 98.8vw;
 }
 
 header .nav {
@@ -180,7 +179,7 @@ header .logo {
 }
 
 .nav nav ul {
-  margin-left: 500px;
+  margin-left: 750px;
   margin-top: 20px;
   display: flex;
   justify-content: space-around;
@@ -225,10 +224,10 @@ nav li a {
 /* --------------------------VANTAGENS --------------------------- */
 .homeVantages {
   display: flex;
-  width: 100vw;
+  width: 10vw;
   padding: 30px;
   margin-bottom: 30px;
-  max-width: 150px;
+  margin-left: 65px;
 }
 
 .advantage-list {
@@ -278,18 +277,20 @@ nav li a {
   margin-left: 350px;
   justify-content: center;
   align-items: center;
-  background-color: rgb(48, 25, 107);
-  border: 1px solid rgb(214, 214, 214);
+  background-image: url(./img/novo/patinhas2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   border-radius: 10px;
   color: #fff;
   margin-bottom: 50px;
-
 }
 
 .titulo-vendidos {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 25px;
 }
 
 /* --------------------------Produtos------------ */
@@ -418,33 +419,39 @@ nav li a {
 
 /* --------------------------Banho------------ */
 .content-banhotosa {
-  background-image: url(./img/banho.jpg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 150px;
+  height: 75vh;
+ /* place-items: center;*/
+}
+.imgFundo{
+  background-image: url(./img/novo/banho.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 100vh;
-  place-items: center;
-  margin-top: 100px;
+  height: 600px;
+  width: 100vw;
 }
- .content{
+ .content2{
   display: flex;
   background-color: rgba(0, 0, 0, 0.466);
   border-radius: 25px;
   box-shadow: 0 0.9rem 1.7rem rgba(17, 17, 17, 0.25),
     0 0.7rem 0.7rem rgba(0, 0, 0, 0.288);
   width: 450px;
-  height: 50px;
+  height: 600px;
   max-width: 450px;
-  max-height: 50px;
   display: grid;
   margin-left: 450px
 }
-.content-banhotosa .content h1{
+.content-banhotosa .content2 h1{
   display: flex;
   font-size: 20px;
   padding: 30px;
   color: #fff;
-  margin-top: 50px;
+  margin-top: 30px;
   height: 5px;
   align-items: center;
   justify-content: center;
@@ -492,6 +499,8 @@ input {
     cursor: pointer;
     display: inline-block;
     transition: 0.1s;
+    font-size: 15px;
+  font-weight: 700;
 }
   
   .bnt2.animate {

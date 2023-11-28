@@ -52,11 +52,12 @@ if (isset($_POST['form1'])) {
 
 <!DOCTYPE html>
 <html>
-<link rel="stylesheet" href="styleReal.css">
-<link rel="stylesheet" href="mediaReal.css">
-<script src="script.js" defer></script>
+
 
 <head>
+    <link rel="stylesheet" href="styleReal.css">
+    <link rel="stylesheet" href="mediaReal.css">
+    <script src="script.js" defer></script>
     <title>Pelúcias & Ração </title>
     <style>
         #prev,
@@ -96,7 +97,7 @@ if (isset($_POST['form1'])) {
             <nav>
                 <ul>
                     <li><a href="#home">Home</a></li>
-                    <li><a href="#Produtos">Produtos</a></li>
+                    <li><a href="#slider-container">Produtos</a></li>
                     <li><a href="#Banho&Tosa">Banho&Tosa</a></li>
                     <li><a class="btn" href="./usuario/logout.php">Logout</a></li>
                 </ul>
@@ -108,7 +109,7 @@ if (isset($_POST['form1'])) {
         <div class="containerInfo">
             <h2>Pelúcia & Ração <br><span>PetShop</span></h2>
             <p>Olá! Somos Pelúcias & Ração. Nascemos da alegria e do prazer que é cuidar de cães e gatos!
-                Todos os pets que recebemos são tratados assim: como se fossem nossos próprios filhos.</p>
+                Oferecemos ampla variedade de produtos para proporcionar melhor experiência à você e seu pet!</p>
             <ul class="social">
                 <li><a href="https://www.facebook.com/"><img src="./img/Social/face.png" alt=""></a></li>
                 <li><a href="https://www.instagram.com/"><img src="./img/Social/insta.png" alt=""></a></li>
@@ -267,32 +268,34 @@ if (isset($_POST['form1'])) {
 
     <!-- ------------------------------------- BANHO E TOSA ---------------------------------------------------- -->
     <div class="content-banhotosa" id="Banho&Tosa">
-        <div class="content">
+        <div class="imgFundo">
+            <div class="content2">
 
-            <form method="post">
-                <h1>Cadastro Pet</h1>
-                <input type="text" name="nome" id="nome" placeholder="Insira o nome o pet" required>
-                <input type="text" name="raca" id="raca" placeholder="Insira a raca do pet" required>
-                <input type="number" name="idade" id="idade" placeholder="Insira a idade do pet" required>
+                <form method="post">
+                    <h1>Cadastro Pet</h1>
+                    <input type="text" name="nome" id="nome" placeholder="Insira o nome o pet" required>
+                    <input type="text" name="raca" id="raca" placeholder="Insira a raca do pet" required>
+                    <input type="number" name="idade" id="idade" placeholder="Insira a idade do pet" required>
 
-                <input class="btn2" name="form1" type="submit" value="Cadastre seu Pet aqui!" class="salvar">
-            </form>
+                    <input class="btn2" name="form1" type="submit" value="Cadastre seu Pet aqui!" class="salvar">
+                </form>
 
-            <form method="post">
-                <h1>Faça seu agendamento de Banho e Tosa!</h1>
-                <input type="date" name="data" id="data" placeholder="Insira a data ex:2023-11-02" required>
-                <input type="time" name="hora" id="hora" placeholder="Insira a hora ex:10:35:00" required>
-                <select id="petss" name="petss">
-                    <option>Selecione o pet</option>
-                    <?php
-                    while ($row = $pato->fetch(PDO::FETCH_ASSOC)) {
-                        echo " <option value=" . $row['id'] . ">" . $row['nome'] . "</option>";
-                    } ?>
+                <form method="post">
+                    <h1>Faça seu agendamento de Banho e Tosa!</h1>
+                    <input type="date" name="data" id="data" placeholder="Insira a data ex:2023-11-02" required>
+                    <input type="time" name="hora" id="hora" placeholder="Insira a hora ex:10:35:00" required>
+                    <select id="petss" name="petss">
+                        <option>Selecione o pet</option>
+                        <?php
+                        while ($row = $pato->fetch(PDO::FETCH_ASSOC)) {
+                            echo " <option value=" . $row['id'] . ">" . $row['nome'] . "</option>";
+                        } ?>
 
-                    <input class="btn2" name="form2" type="submit" value="Agendar" class="salvar">
-                </select>
-            </form>
+                        <input class="btn2" name="form2" type="submit" value="Agendar" class="salvar">
+                    </select>
+                </form>
 
+            </div>
         </div>
     </div>
     <!-- ----------------------------FOOTER --------------------------------------------------- -->

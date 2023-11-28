@@ -11,7 +11,7 @@ $data = $produ->read();
 
 <!DOCTYPE html>
 <html>
-<link rel="stylesheet" href="styleteste.css">
+<link rel="stylesheet" href="style.css">
 <!--<link rel="stylesheet" href="media.css">-->
 <script src="script.js" defer></script>
 
@@ -71,7 +71,7 @@ $data = $produ->read();
         <div class="containerInfo">
             <h2>Pelúcia & Ração <br><span>PetShop</span></h2>
             <p>Olá! Somos Pelúcias & Ração. Nascemos da alegria e do prazer que é cuidar de cães e gatos!
-                Todos os pets que recebemos são tratados assim: como se fossem nossos próprios filhos.</p>
+                Oferecemos ampla variedade de produtos para proporcionar melhor experiência à você e seu pet!</p>
             <ul class="social">
                 <li><a href="https://www.facebook.com/"><img src="./img/Social/face.png" alt=""></a></li>
                 <li><a href="https://www.instagram.com/"><img src="./img/Social/insta.png" alt=""></a></li>
@@ -232,7 +232,7 @@ $data = $produ->read();
             <div class="contentBanho">
                 <h1>Faça seu login para acessar nossa agenda de Banho e Tosa para seu pet!</h1>
                 <a href="./usuario/login.php" type="submit">
-                    <button class="btn">
+                    <button class="btn2">
                         Fazer Login
                     </button>
                 </a>
