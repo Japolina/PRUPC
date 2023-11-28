@@ -56,7 +56,7 @@ if (isset($_POST['form1'])) {
 
 <head>
     <link rel="stylesheet" href="styleReal.css">
-    <link rel="stylesheet" href="mediaReal.css">
+    <link rel="stylesheet" href="mediaReal1366.css">
     <script src="script.js" defer></script>
     <title>Pelúcias & Ração </title>
     <style>

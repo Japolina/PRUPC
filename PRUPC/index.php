@@ -12,7 +12,7 @@ $data = $produ->read();
 <!DOCTYPE html>
 <html>
 <link rel="stylesheet" href="style.css">
-<!--<link rel="stylesheet" href="media.css">-->
+<link rel="stylesheet" href="media1366.css">
 <script src="script.js" defer></script>
 
 <head>
@@ -159,7 +159,7 @@ $data = $produ->read();
         <div id="slider-wrapper">
             <?php
             $count = 0;
-            while ($row = $data->fetch(PDO::FETCH_ASSOC)) { ?>
+            while ($row = $data->fetch(PDO::FETCH_ASSOC)) { if($count < 5){?>
                 <div class="slide">
 
 
@@ -182,7 +182,7 @@ $data = $produ->read();
 
                     </a>
                 </div>
-            <?php } ?>
+            <?php } $count++; } ?>
 
             <!-- Add more slides as needed -->
         </div>
