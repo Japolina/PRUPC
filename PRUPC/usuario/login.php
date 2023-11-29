@@ -13,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 
     if ($user->login($username, $password)) {
-        header("Location: ../realindex.php");
+        header("Location: ../view/realindex.php");
         exit();
     } else {
         echo "Login falhou. Verifique suas credenciais.";
@@ -24,8 +24,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 <!DOCTYPE html>
 <html lang="PT-BR">
-<link rel="stylesheet" href="login.css">
-<link rel="stylesheet" href="loginMedia.css">
+<link rel="stylesheet" href="../css/login.css">
+<link rel="stylesheet" href="../css/media/loginMedia.css">
+<link rel="stylesheet" href="../css/media/loginMedia1920.css">
 
 <head>
 
@@ -39,9 +40,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <a href="#"><img src="../img/Logo/logo2.png" alt="" class="logo"></a>
         <nav>
             <ul>
-                <li><a href="../index.php">Home</a></li>
-                <li><a href="../index.php#slider-container">Produtos</a></li>
-                <li><a href="../index.php#Banho&Tosa">Banho&Tosa</a></li>
+                <li><a href="../view/index.php">Home</a></li>
+                <li><a href="../view/index.php#slider-container">Produtos</a></li>
+                <li><a href="../view/index.php#Banho&Tosa">Banho&Tosa</a></li>
             </ul>
         </nav>
     </header>
@@ -56,7 +57,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         </div>
 
         <div class="containerBotoes">
-            <a href="../realindex.php" type="submit"><button class="btn">Logue-se Aqui</button></a>
+            <a href="../view/realindex.php" type="submit"><button class="btn">Logue-se Aqui</button></a>
             <a href="register.php" class="esqueciSenha">Não tem cadastro, Clique aqui!!</a>
         </div>
     </section>

@@ -23,8 +23,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="register.css">
-    <link rel="stylesheet" href="registerMedia.css">
+    <link rel="stylesheet" href="../css/register.css">
+    <link rel="stylesheet" href="../css/media/registerMedia.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro</title>
@@ -35,9 +35,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <a href="#"><img src="../img/Logo/logo2.png" alt="" class="logo"></a>
         <nav>
             <ul>
-                <li><a href="../index.php">Home</a></li>
-                <li><a href="../index.php#slider-container">Produtos</a></li>
-                <li><a href="../index.php#Banho&Tosa">Banho&Tosa</a></li>
+                <li><a href="../view/index.php">Home</a></li>
+                <li><a href="../view/index.php#slider-container">Produtos</a></li>
+                <li><a href="../view/index.php#Banho&Tosa">Banho&Tosa</a></li>
             </ul>
         </nav>
     </header>
@@ -56,7 +56,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 
             <div class="containerBotoes">
-                <a href="../realindex.php" type="submit"><button class="btn" value="Registrar">Registrar</button></a>
+                <a href="../view/realindex.php" type="submit"><button class="btn" value="Registrar">Registrar</button></a>
                 <a href="./login.php" type="submit" class="voltar">
                     <img src="../img/Login/back.png" alt="">
                     <h1 class="textVoltar">Voltar</h1>

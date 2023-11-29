@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background-image: url(../img/Login/fundoLoginPartall.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  height: 100vh;
+  place-items: center;
+}
+.containerTabela {
+  background-color: rgb(255, 255, 255);
+  border-radius: 25px;
+  box-shadow: 0 0.9rem 1.7rem rgba(255, 255, 255, 0.25),
+    0 0.7rem 0.7rem rgba(0, 0, 0, 0.22);
+  height: 500px;
+  max-width: 550px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  display: grid;
+  margin-left: 450px;
+  margin-top: 90px;
+}
+
+.form__title {
+  font-weight: 300;
+  margin: 0;
+  margin-bottom: 3rem;
+  margin-top: 2rem;
+  align-items: center;
+  justify-content: center;
+  margin-left: 100px;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+/* ------------------------------------- Header ---------------------------- */
+header {
+  display: flex;
+  background-color: #2b2b2b;
+  height: 100px;
+  width: 100vw;
+}
+
+header .nav {
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+header .logo {
+  margin-left: 40px;
+  margin-bottom: 30px;
+  width: 180px;
+  height: 100px;
+}
+
+.nav nav ul {
+  margin-left: 800px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+nav ul a {
+  color: aliceblue;
+  margin: 0px;
+  text-transform: uppercase;
+  font-size: 10px;
+  display: block;
+  margin-top: 15px;
+}
+
+nav ul a:not(.btn)::after {
+  content: "";
+  background-color: #e1b000;
+  height: 3px;
+  width: 0%;
+  display: block;
+  transition: 0.3s;
+}
+
+nav ul a:hover::after {
+  width: 100%;
+}
+
+nav li {
+  list-style: none;
+}
+
+nav li a {
+  padding: 10px 0px;
+  display: inline-block;
+  color: #fff;
+  font-weight: 500;
+  text-decoration: none;
+  font-size: 15px;
+  margin-left: 50px;
+  
+}
+.containerBotoes {
+  display: flex;
+  margin-left: 50px;
+  margin-top: 25px;
+}
+.textVoltar{
+  display: flex;
+  color: black;
+  font-size: 18px;
+}
+.voltar{
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  margin-left: 30px;
+}
+.esqueciSenha {
+  display: flex;
+  margin-top: 15px;
+  font-size: 15px;
+  margin-left: 15px;
+}
+
+/* ------------------------------------------ Botão Login ----------------------------- */
+
+.btn {
+  background-color: #e1b000;
+  color: aliceblue;
+  padding: 15px 30px;
+  border-radius: 10px;
+  cursor: pointer;
+  display: inline-block;
+  transition: 0.1s;
+  border: none;
+  align-items: center;
+  margin-left: 100px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.bnt.animate {
+  animation: animate-outline 1s ease-ou infinite;
+}
+
+.btn:hover {
+  background-color: rgb(206, 144, 0);
+}
+
+@keyframes animate-outline {
+  from {
+    outline: 0px solid #e1b000;
+  }
+
+  to {
+    outline: 15px solid #e1b000;
+  }
+}
+
+/* ----------------------------------- Botão --------------------------------------- */
+
+.button {
+  min-width: 300px;
+  min-height: 60px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  font-weight: 700;
+  color: #ffffff;
+  background: #e1b000;
+  background: linear-gradient(90deg, #e1b000 0%, rgb(255, 235, 80) 100%);
+  border: none;
+  border-radius: 1000px;
+  box-shadow: 12px 12px 24px #e1b000;
+  transition: all 0.3s ease-in-out 0s;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  padding: 10px;
+}
+
+----- button::before {
+  content: '';
+  border-radius: 1000px;
+  min-width: calc(300px + 12px);
+  min-height: calc(60px + 12px);
+  /* border: 1px solid #26456d; */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all .3s ease-in-out infinite;
+}
+
+/* ------------------BOTOES------------------------ */
+
+input {
+  display: flex;
+  place-items: center;
+  background-color: #ffffff;
+  border: 1px solid rgb(134, 134, 134);
+  border-radius: 10px;
+  padding: 0.9rem 0.9rem;
+  align-items: center;
+  justify-content: center;
+  width: 450px;
+
+}
+
+
+.campos {
+  display: flex;
+  margin-left: 50px;
+}
+.espacoBranco {
+  display: flex;
+}
+
+.espaco {
+  display: flex;
+  background-color: rgb(186, 223, 151);
+  height: 100px;
+  padding: 53px 49px;
+}
+
+.espaco2 {
+  display: flex;
+  background-color: rgb(168, 218, 120);
+  height: 300px;
+  padding: 53px 40px;
+  margin-top: 0px;
+}

@@ -1,0 +1,18 @@
+@media (max-width: 1366px) {
+    .nav nav ul {
+        margin-left: 700px;
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .containerTabela {
+        height: 87.7vh;
+        background-color: rgb(255, 255, 255);
+        height: 480px;
+        max-width: 550px;
+        margin-top: 40px;
+    }
+
+}
